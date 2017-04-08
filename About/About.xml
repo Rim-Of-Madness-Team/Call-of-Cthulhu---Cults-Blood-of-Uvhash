@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ModMetaData>
+	<name>Call of Cthulhu - Cults - Blood of Uvhash A16</name>
+	<author>Jecrell</author>
+	<targetVersion>0.16.1393</targetVersion>
+	<description>V1.0
+	Gameplay expansion for Cults.
+	
+	You can now:
+		*adds a new deity, Uvhash, the Blood Mad God of the Void
+		*turn your cultists into vampires
+		*extract blood from prisoners and corpses
+		*create bloodstone for crafting
+		*fill blood tanks for storage
+		</description>
+</ModMetaData>

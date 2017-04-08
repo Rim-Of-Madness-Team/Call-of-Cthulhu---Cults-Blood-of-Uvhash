@@ -1,0 +1,12 @@
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Call of Cthulhu - Cults - Blood of Uvhash 1.0 A16\Source\CultOfUvhash\CultOfUvhash\bin\Debug\CultOfUvhash.dll
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Call of Cthulhu - Cults - Blood of Uvhash 1.0 A16\Source\CultOfUvhash\CultOfUvhash\bin\Debug\CultOfUvhash.pdb
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Call of Cthulhu - Cults - Blood of Uvhash 1.0 A16\Source\CultOfUvhash\CultOfUvhash\bin\Debug\0Harmony.dll
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Call of Cthulhu - Cults - Blood of Uvhash 1.0 A16\Source\CultOfUvhash\CultOfUvhash\bin\Debug\Assembly-CSharp.dll
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Call of Cthulhu - Cults - Blood of Uvhash 1.0 A16\Source\CultOfUvhash\CultOfUvhash\bin\Debug\UnityEngine.dll
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Call of Cthulhu - Cults - Blood of Uvhash 1.0 A16\Source\CultOfUvhash\CultOfUvhash\bin\Debug\Assembly-CSharp-firstpass.dll
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Call of Cthulhu - Cults - Blood of Uvhash 1.0 A16\Source\CultOfUvhash\CultOfUvhash\bin\Debug\NAudio.dll
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Call of Cthulhu - Cults - Blood of Uvhash 1.0 A16\Source\CultOfUvhash\CultOfUvhash\bin\Debug\NVorbis.dll
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Call of Cthulhu - Cults - Blood of Uvhash 1.0 A16\Source\CultOfUvhash\CultOfUvhash\bin\Debug\UnityEngine.xml
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Call of Cthulhu - Cults - Blood of Uvhash 1.0 A16\Source\CultOfUvhash\CultOfUvhash\obj\Debug\CultOfUvhash.csprojResolveAssemblyReference.cache
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Call of Cthulhu - Cults - Blood of Uvhash 1.0 A16\Source\CultOfUvhash\CultOfUvhash\obj\Debug\CultOfUvhash.dll
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Call of Cthulhu - Cults - Blood of Uvhash 1.0 A16\Assemblies\CultOfUvhash.dll

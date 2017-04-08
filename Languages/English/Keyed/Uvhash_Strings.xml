@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- Uvhash 1.0 -->
+
+	<BloodTankStored>Stored</BloodTankStored>
+	<BloodTankEfficiency>Efficiency</BloodTankEfficiency>
+	<BloodTankLitres>litres</BloodTankLitres>
+	<BloodHaulPrisoner_Gathering>Gathering prisoner</BloodHaulPrisoner_Gathering>'
+	<BloodHaulPrisoner_Strapping>Strapping {0} to device</BloodHaulPrisoner_Strapping>
+	<BloodHaulPrisoner_Finished>Finishing up</BloodHaulPrisoner_Finished>
+	<BloodNoPrisoners>No prisoners availble</BloodNoPrisoners>
+	<BloodBodyLoadable_Cancel>Cancelling loading body.</BloodBodyLoadable_Cancel>
+	<BloodBodyLoadable_MissingFactory>The blood factory is unavailable.</BloodBodyLoadable_MissingFactory>
+	<BloodBodyLoadable_ActorUnavailable>The actor is unavailable.</BloodBodyLoadable_ActorUnavailable>
+	<BloodBodyLoadable_BodyUnavailable>The body of {0} is unavailable.</BloodBodyLoadable_BodyUnavailable>
+	<BloodBodyLoadable_GatheringBody>{0} is gathering the body of {1}</BloodBodyLoadable_GatheringBody>
+	<BloodBodyLoadable_BodyLoaded>Body Loaded: ({0} litres left)</BloodBodyLoadable_BodyLoaded>
+	<BloodLossWarning>{0} has less than 4 litres of blood remaining.</BloodLossWarning>
+	<BloodCommandLoadPrisoner>Load Prisoner</BloodCommandLoadPrisoner>
+	<BloodCommandLoadPrisonerDesc>A random colonist places a prisoner inside the blood factory.</BloodCommandLoadPrisonerDesc>
+	<BloodCommandCancelLoadPrisonerDesc>Cancel loading prisoner</BloodCommandCancelLoadPrisonerDesc>
+	<BloodCommandExtract>Claim Blood</BloodCommandExtract>
+	<BloodCommandExtractDesc>Extract {0} litres of blood from the blood tank.</BloodCommandExtractDesc>
+	<MustPlaceNextToBloodCollectorAccepter>Must be placed next to something that needs a blood collector.</MustPlaceNextToBloodCollectorAccepter>
+	<BloodTankFull>Blood tank is full to capacity.</BloodTankFull>
+	
+	
+</LanguageData>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+  <ThingDef Name="BloodBuildingBase" Abstract="True">
+    <category>Building</category>
+    <thingClass>Building</thingClass>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <selectable>true</selectable>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+  </ThingDef>
+  
+  <!-- Blood Factories -->
+  
+  <ThingDef ParentName="BloodBuildingBase">
+    <defName>Uvhash_BloodFactory_IronMaiden</defName>
+    <label>blood factory (iron maiden)</label>
+    <Description>Simply referred to as a blood factory, this iron maiden takes in a corpse or live body and quickly drains them of blood.</Description>
+    <thingClass>CultOfUvhash.Building_BloodFactory</thingClass>
+    <category>Building</category>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <graphicData>
+      <texPath>Things/Building/Production/FermentingBarrel</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <damageData>
+        <rect>(0.05,0.1,0.9,0.9)</rect>
+      </damageData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.45</fillPercent>
+    <pathCost>60</pathCost>
+    <statBases>
+      <WorkToBuild>600</WorkToBuild>
+      <Mass>10</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>	
+    <costList>
+      <Steel>10</Steel>
+      <WoodLog>30</WoodLog>
+    </costList>
+    <tickerType>Normal</tickerType>
+    <rotatable>true</rotatable>
+    <designationCategory>Production</designationCategory>
+    <constructEffect>ConstructWood</constructEffect>
+    <researchPrerequisites><li>Brewing</li></researchPrerequisites>
+  </ThingDef>
+  
+  <!-- Blood Collector -->
+  
+  <ThingDef ParentName="BloodBuildingBase">
+    <defName>Uvhash_BloodCollector</defName>
+    <label>blood collector</label>
+    <Description>This small tank collects blood from particularly horrific devices.</Description>
+    <thingClass>CultOfUvhash.Building_BloodCollector</thingClass>
+    <category>Building</category>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+	<building>
+      <fullGraveGraphicData> <!-- This is the "closed" or "full" graphic -->
+        <texPath>Things/Building/Misc/GraveFull</texPath>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <damageData>
+          <rect>(0.05,0.1,0.9,0.9)</rect>
+        </damageData>
+	  </fullGraveGraphicData>
+	</building>
+    <graphicData> <!-- This is the "open" or "empty" graphic -->
+      <texPath>Things/Building/Production/FermentingBarrel</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <damageData>
+        <rect>(0.05,0.1,0.9,0.9)</rect>
+      </damageData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.45</fillPercent>
+    <pathCost>60</pathCost>
+    <statBases>
+      <WorkToBuild>600</WorkToBuild>
+      <Mass>10</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <costList>
+      <Steel>10</Steel>
+      <WoodLog>30</WoodLog>
+    </costList>
+		<comps>
+			<li Class="CultOfUvhash.CompProperties_BloodTank">
+			    <transmitsBlood>true</transmitsBlood>
+			</li>
+			<li Class="CompProperties_TemperatureRuinable">
+				<minSafeTemperature>-1</minSafeTemperature>
+				<maxSafeTemperature>32</maxSafeTemperature>
+				<progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+			</li>
+		</comps>
+    <tickerType>Normal</tickerType>
+    <rotatable>true</rotatable>
+    <designationCategory>Production</designationCategory>
+    <constructEffect>ConstructWood</constructEffect>
+    <researchPrerequisites><li>Brewing</li></researchPrerequisites>
+	<placeWorkers>
+	  <li>CultOfUvhash.PlaceWorker_NextToBloodCollectorAccepter</li>
+	</placeWorkers>
+  </ThingDef>  
+
+  <!-- Blood Nexus -->
+  
+  <ThingDef ParentName="BloodBuildingBase">
+    <defName>Uvhash_BloodNexus</defName>
+    <label>blood nexus</label>
+    <Description>This large pool collects and stores blood.</Description>
+    <thingClass>CultOfUvhash.Building_BloodHub</thingClass>
+    <category>Building</category>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <graphicData>
+      <texPath>Things/Building/Production/FermentingBarrel</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <damageData>
+        <rect>(0.05,0.1,0.9,0.9)</rect>
+      </damageData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.45</fillPercent>
+    <pathCost>60</pathCost>
+    <statBases>
+      <WorkToBuild>600</WorkToBuild>
+      <Mass>10</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+	<costList>
+      <Steel>10</Steel>
+      <WoodLog>30</WoodLog>
+    </costList>
+		<comps>
+			<li Class="CompProperties_TemperatureRuinable">
+				<minSafeTemperature>-1</minSafeTemperature>
+				<maxSafeTemperature>32</maxSafeTemperature>
+				<progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+			</li>
+			<li Class="CultOfUvhash.CompProperties_BloodTank">
+			    <transmitsBlood>false</transmitsBlood>
+				<storedBloodMax>3000.0</storedBloodMax>
+			</li>			
+		</comps>
+    <tickerType>Normal</tickerType>
+    <rotatable>true</rotatable>
+    <designationCategory>Production</designationCategory>
+    <constructEffect>ConstructWood</constructEffect>
+    <researchPrerequisites><li>Brewing</li></researchPrerequisites>
+  </ThingDef>
+  
+</ThingDefs>

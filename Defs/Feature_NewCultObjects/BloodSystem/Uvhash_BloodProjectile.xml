@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+  <ThingDef>
+    <defName>Uvhash_BloodMist</defName>
+    <label>blood mist</label>
+    <thingClass>CultOfUvhash.Projectile_BloodMist</thingClass>	
+    <graphicData>
+      <texPath>Things/Item/Resource/Chemfuel</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>  
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <useHitPoints>False</useHitPoints>
+    <neverMultiSelect>True</neverMultiSelect>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>0</damageAmountBase>
+      <speed>5</speed>
+    </projectile>
+  </ThingDef>
+  
+</ThingDefs>

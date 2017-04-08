@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <!--============= Item hauling ===============-->
+
+  <JobDef>
+    <defName>BloodHaulPrisoner</defName>
+    <driverClass>CultOfUvhash.JobDriver_BloodHaulPrisoner</driverClass>
+    <reportString>sacrificing TargetB.</reportString>
+	<joyDuration>1600</joyDuration>
+	<joyGainRate>2</joyGainRate>
+	<alwaysShowWeapon>true</alwaysShowWeapon>
+	<joyMaxParticipants>20</joyMaxParticipants>
+  </JobDef>
+ 
+</Defs>
