@@ -42,7 +42,7 @@
     <label>bone</label>
     <description>Recovered calcified piece from the skeleton a flesh-based creature.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/WoodLog</texPath>
+      <texPath>Misc/Bone</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
     </graphicData>
     <equippedAngleOffset>-20</equippedAngleOffset>
