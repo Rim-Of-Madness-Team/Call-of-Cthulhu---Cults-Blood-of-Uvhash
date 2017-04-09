@@ -7,7 +7,7 @@
   <ThingDef ParentName="ResourceBase">
     <defName>Uvhash_Blood</defName>
     <label>blood (1L)</label>
-    <description>.</description>
+    <description>The bloodiest of bloods, Blood.</description>
     <graphicData>
       <texPath>Things/Item/Resource/Chemfuel</texPath>
       <graphicClass>Graphic_Single</graphicClass>
