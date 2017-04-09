@@ -54,9 +54,11 @@
     <Compile Include="Building_BloodCollector.cs" />
     <Compile Include="Building_BloodHub.cs" />
     <Compile Include="Building_BloodFactory.cs" />
+    <Compile Include="Building_BloodRune.cs" />
     <Compile Include="CompBloodTank.cs" />
     <Compile Include="CompProperties_BloodTank.cs" />
     <Compile Include="CthulhuUtility.cs" />
+    <Compile Include="HarmonyPatches.cs" />
     <Compile Include="JobDriver_BloodHaulPrisoner.cs" />
     <Compile Include="PlaceWorker_NextToBloodCollectorAccepter.cs" />
     <Compile Include="Projectile_BloodMist.cs" />
