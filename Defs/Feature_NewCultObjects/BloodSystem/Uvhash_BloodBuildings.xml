@@ -29,6 +29,7 @@
         <damageData>
           <rect>(0.05,0.1,0.9,0.9)</rect>
         </damageData>
+		<drawSize>(2,2)</drawSize>
 	  </fullGraveGraphicData>
 	</building>
     <graphicData> <!-- This is the "open" or "empty" graphic -->
@@ -37,6 +38,7 @@
       <damageData>
         <rect>(0.05,0.1,0.9,0.9)</rect>
       </damageData>
+	  	  <drawSize>(2,2)</drawSize>
     </graphicData>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
@@ -71,7 +73,6 @@
 	    <graphicData>
       <texPath>Building/BloodPool2</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
-	  <drawSize>(2,2)</drawSize>
       <damageData>
         <rect>(0.05,0.1,0.9,0.9)</rect>
       </damageData>
