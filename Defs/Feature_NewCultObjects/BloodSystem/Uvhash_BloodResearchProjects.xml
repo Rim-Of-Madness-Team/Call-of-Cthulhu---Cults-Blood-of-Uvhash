@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ResearchProjectDefs>
+
+  <!--=============================== Tier 4: Hi-tech research bench with multi-analyzer ===================================-->
+
+  <ResearchProjectDef Name="ForbiddenKnowledgeResearch" Abstract="True">
+    <requiredResearchBuilding>Cults_ForbiddenKnowledgeCenter</requiredResearchBuilding>
+	<techLevel>Neolithic</techLevel>
+	<tab>Cults_ResearchTab</tab>
+  </ResearchProjectDef>
+
+    <ResearchProjectDef ParentName="ForbiddenKnowledgeResearch">
+      <defName>Forbidden_BloodCrystal</defName>
+      <label>Blood Crystal</label>
+      <description>Allows for the creation of a blood nexus, blood tanks, and an iron maiden for extacting blood.</description>
+      <baseCost>100</baseCost>
+  	<prerequisites>
+  	<li>Forbidden_Studies</li>
+  	</prerequisites>
+  	<researchViewX>4</researchViewX>
+  	<researchViewY>2.5</researchViewY>
+    </ResearchProjectDef>
+
+        <ResearchProjectDef ParentName="ForbiddenKnowledgeResearch">
+          <defName>Forbidden_BloodMagicI</defName>
+          <label>Rune Magic</label>
+          <description>Your colonists can now create blood-powered runes from a casting altar. Unlocks: Azathoth rune.</description>
+          <baseCost>100</baseCost>
+        <prerequisites>
+        <li>Forbidden_BloodCrystal</li>
+        </prerequisites>
+        <researchViewX>5</researchViewX>
+        <researchViewY>2.5</researchViewY>
+        </ResearchProjectDef>
+
+
+      <ResearchProjectDef ParentName="ForbiddenKnowledgeResearch">
+        <defName>Forbidden_BloodMagicAlterationI</defName>
+        <label>Alteration I</label>
+        <description>Unlocks: Gloon Rune</description>
+        <baseCost>100</baseCost>
+      <prerequisites>
+      <li>Forbidden_BloodMagicI</li>
+      </prerequisites>
+      <researchViewX>6</researchViewX>
+      <researchViewY>3.5</researchViewY>
+    </ResearchProjectDef>
+
+
+    <ResearchProjectDef ParentName="ForbiddenKnowledgeResearch">
+      <defName>Forbidden_BloodMagicAlterationII</defName>
+      <label>Alteration II</label>
+      <description>Unlocks: Glaaki Rune</description>
+      <baseCost>100</baseCost>
+    <prerequisites>
+    <li>Forbidden_BloodMagicAlterationI</li>
+    </prerequisites>
+    <researchViewX>7</researchViewX>
+    <researchViewY>3.5</researchViewY>
+  </ResearchProjectDef>
+
+
+      <ResearchProjectDef ParentName="ForbiddenKnowledgeResearch">
+        <defName>Forbidden_BloodMagicAlterationIII</defName>
+        <label>Alteration III</label>
+        <description>Unlocks: Glaaki Rune</description>
+        <baseCost>100</baseCost>
+      <prerequisites>
+      <li>Forbidden_BloodMagicAlterationII</li>
+      </prerequisites>
+      <researchViewX>8</researchViewX>
+      <researchViewY>3.5</researchViewY>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef ParentName="ForbiddenKnowledgeResearch">
+      <defName>Forbidden_BloodMagicDestructionI</defName>
+      <label>Destruction I</label>
+      <description>Unlocks: Tulzscha Rune</description>
+      <baseCost>100</baseCost>
+    <prerequisites>
+    <li>Forbidden_BloodMagicI</li>
+    </prerequisites>
+    <researchViewX>6</researchViewX>
+    <researchViewY>1.5</researchViewY>
+  </ResearchProjectDef>
+
+    <ResearchProjectDef ParentName="ForbiddenKnowledgeResearch">
+      <defName>Forbidden_BloodMagicDestructionII</defName>
+      <label>Destruction II</label>
+      <description>Unlocks: Gtuhanai Rune</description>
+      <baseCost>100</baseCost>
+    <prerequisites>
+    <li>Forbidden_BloodMagicDestructionII</li>
+    </prerequisites>
+    <researchViewX>7</researchViewX>
+    <researchViewY>1.5</researchViewY>
+  </ResearchProjectDef>
+
+    <ResearchProjectDef ParentName="ForbiddenKnowledgeResearch">
+      <defName>Forbidden_BloodMagicDestructionIII</defName>
+      <label>Destruction III</label>
+      <description>Unlocks: Cthugha Rune</description>
+      <baseCost>100</baseCost>
+    <prerequisites>
+    <li>Forbidden_BloodMagicDestructionII</li>
+    </prerequisites>
+    <researchViewX>8</researchViewX>
+    <researchViewY>1.5</researchViewY>
+  </ResearchProjectDef>
+
+      <ResearchProjectDef ParentName="ForbiddenKnowledgeResearch">
+        <defName>Forbidden_BloodMagicSummoningI</defName>
+        <label>Conjuration I</label>
+        <description>Unlocks: Baoht Z'uqqa-mogg Rune</description>
+        <baseCost>100</baseCost>
+      <prerequisites>
+      <li>Forbidden_BloodMagicI</li>
+      </prerequisites>
+      <researchViewX>6</researchViewX>
+      <researchViewY>2.5</researchViewY>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef ParentName="ForbiddenKnowledgeResearch">
+      <defName>Forbidden_BloodMagicSummoningII</defName>
+      <label>Conjuration II</label>
+      <description>Unlocks: Ythogtha Rune</description>
+      <baseCost>100</baseCost>
+    <prerequisites>
+    <li>Forbidden_BloodMagicSummoningI</li>
+    </prerequisites>
+    <researchViewX>7</researchViewX>
+    <researchViewY>2.5</researchViewY>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef ParentName="ForbiddenKnowledgeResearch">
+      <defName>Forbidden_BloodMagicSummoningIII</defName>
+      <label>Conjuration III</label>
+      <description>Unlocks: Uvhash Rune</description>
+      <baseCost>100</baseCost>
+    <prerequisites>
+    <li>Forbidden_BloodMagicSummoningII</li>
+    </prerequisites>
+    <researchViewX>8</researchViewX>
+    <researchViewY>2.5</researchViewY>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef ParentName="ForbiddenKnowledgeResearch">
+      <defName>Forbidden_BoneStructures</defName>
+      <label>Bone Structures</label>
+      <description>Allows for the construction of ossuary walls, skeletal grotesques, and a skull throne.</description>
+      <baseCost>1000</baseCost>
+      <prerequisites>
+      <li>Forbidden_Studies</li>
+      </prerequisites>
+      <researchViewX>4</researchViewX>
+      <researchViewY>3.5</researchViewY>
+    </ResearchProjectDef>
+
+</ResearchProjectDefs>

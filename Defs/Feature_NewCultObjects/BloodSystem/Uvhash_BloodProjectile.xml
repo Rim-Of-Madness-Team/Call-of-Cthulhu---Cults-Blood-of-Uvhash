@@ -1,37 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ThingDefs>
 
-  <!--================== Bases ==================-->
-  
-  <ThingDef Name="ResourceBase" Abstract="True">
-    <thingClass>ThingWithComps</thingClass>
-    <category>Item</category>
-    <resourceReadoutPriority>Middle</resourceReadoutPriority>
-    <useHitPoints>true</useHitPoints>
-    <selectable>true</selectable>
-    <altitudeLayer>Item</altitudeLayer>
-    <stackLimit>75</stackLimit>
-		<statBases>
-			<Beauty>-7</Beauty>
-		</statBases>
-		<comps>
-			<li Class="CompProperties_Forbiddable"/>
-		</comps>
-		<alwaysHaulable>true</alwaysHaulable>
-		<drawGUIOverlay>true</drawGUIOverlay>
-		<rotatable>false</rotatable>
-		<pathCost>15</pathCost>
-	</ThingDef>
-
-
   <ThingDef>
     <defName>Uvhash_BloodMist</defName>
     <label>blood mist</label>
-    <thingClass>CultOfUvhash.Projectile_BloodMist</thingClass>	
+    <thingClass>CultOfUvhash.Projectile_BloodMist</thingClass>
     <graphicData>
       <texPath>Things/Item/Resource/Chemfuel</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>  
+    </graphicData>
     <category>Projectile</category>
     <tickerType>Normal</tickerType>
     <altitudeLayer>Projectile</altitudeLayer>
@@ -43,5 +20,5 @@
       <speed>5</speed>
     </projectile>
   </ThingDef>
-  
+
 </ThingDefs>

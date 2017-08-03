@@ -12,9 +12,9 @@
     <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
     <filthLeaving>BuildingRubble</filthLeaving>
   </ThingDef>
-  
+
   <!-- Blood Factories -->
-  
+
   <ThingDef ParentName="BloodBuildingBase">
     <defName>Uvhash_BloodFactory_IronMaiden</defName>
     <label>blood factory (iron maiden)</label>
@@ -25,22 +25,22 @@
 	<building>
       <fullGraveGraphicData> <!-- This is the "closed" or "full" graphic -->
         <texPath>Building/MaidenClosed</texPath>
-        <graphicClass>Graphic_Multi</graphicClass>
+        <graphicClass>Graphic_Single</graphicClass>
         <damageData>
           <rect>(0.05,0.1,0.9,0.9)</rect>
         </damageData>
-		<drawSize>(2.5,2.5)</drawSize>
+		<drawSize>(2.7,2.7)</drawSize>
 	  </fullGraveGraphicData>
 	</building>
     <graphicData> <!-- This is the "open" or "empty" graphic -->
       <texPath>Building/MaidenOpen</texPath>
-      <graphicClass>Graphic_Multi</graphicClass>
+      <graphicClass>Graphic_Single</graphicClass>
       <damageData>
         <rect>(0.05,0.1,0.9,0.9)</rect>
       </damageData>
-	  	  <drawSize>(2,2)</drawSize>
+	  	  <drawSize>(2.7,2.7)</drawSize>
     </graphicData>
-    <altitudeLayer>Building</altitudeLayer>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <fillPercent>0.45</fillPercent>
     <pathCost>60</pathCost>
@@ -49,7 +49,7 @@
       <Mass>10</Mass>
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>1.0</Flammability>
-    </statBases>	
+    </statBases>
     <costList>
       <Steel>10</Steel>
       <WoodLog>30</WoodLog>
@@ -60,19 +60,19 @@
     <constructEffect>ConstructWood</constructEffect>
     <researchPrerequisites><li>Forbidden_Studies</li></researchPrerequisites>
   </ThingDef>
-  
+
   <!-- Blood Collector -->
-  
+
   <ThingDef ParentName="BloodBuildingBase">
     <defName>Uvhash_BloodCollector</defName>
     <label>blood collector</label>
     <Description>This small tank collects blood from particularly horrific devices.</Description>
     <thingClass>CultOfUvhash.Building_BloodCollector</thingClass>
     <category>Building</category>
-    <minifiedDef>MinifiedFurniture</minifiedDef>	
+    <minifiedDef>MinifiedFurniture</minifiedDef>
 	    <graphicData>
       <texPath>Building/Bloodbarrel</texPath>
-      <graphicClass>Graphic_Multi</graphicClass>
+      <graphicClass>Graphic_Single</graphicClass>
       <damageData>
         <rect>(0.05,0.1,0.9,0.9)</rect>
       </damageData>
@@ -109,10 +109,10 @@
 	<placeWorkers>
 	  <li>CultOfUvhash.PlaceWorker_NextToBloodCollectorAccepter</li>
 	</placeWorkers>
-  </ThingDef>  
+  </ThingDef>
 
   <!-- Blood Nexus -->
-  
+
   <ThingDef ParentName="BloodBuildingBase">
     <defName>Uvhash_BloodNexus</defName>
     <label>blood nexus</label>
@@ -120,9 +120,11 @@
     <thingClass>CultOfUvhash.Building_BloodHub</thingClass>
     <category>Building</category>
     <minifiedDef>MinifiedFurniture</minifiedDef>
+    <size>(3,3)</size>
     <graphicData>
       <texPath>Building/BloodPool</texPath>
-      <graphicClass>Graphic_Multi</graphicClass>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3.3,3.3)</drawSize>
       <damageData>
         <rect>(0.05,0.1,0.9,0.9)</rect>
       </damageData>
@@ -137,7 +139,8 @@
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>1.0</Flammability>
     </statBases>
-	<costList>
+	  <costList>
+      <Uvhash_BloodCrystal>1</Uvhash_BloodCrystal>
       <Steel>10</Steel>
       <WoodLog>30</WoodLog>
     </costList>
@@ -150,13 +153,79 @@
 			<li Class="CultOfUvhash.CompProperties_BloodTank">
 			    <transmitsBlood>false</transmitsBlood>
 				<storedBloodMax>3000.0</storedBloodMax>
-			</li>			
+			</li>
 		</comps>
     <tickerType>Normal</tickerType>
-    <rotatable>true</rotatable>
+    <rotatable>false</rotatable>
     <designationCategory>Production</designationCategory>
     <constructEffect>ConstructWood</constructEffect>
     <researchPrerequisites><li>Forbidden_Studies</li></researchPrerequisites>
   </ThingDef>
-  
+
+  <!-- Table base -->
+  <ThingDef Abstract="True" ParentName="FurnitureBase" Name="TableBase">
+    <thingClass>Building</thingClass>
+    <altitudeLayer>Building</altitudeLayer>
+    <description>People eat off tables when chairs are placed facing them.</description>
+    <passability>PassThroughOnly</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <pathCost>60</pathCost>
+    <fillPercent>0.4</fillPercent>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <canOverlapZones>false</canOverlapZones>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <surfaceType>Eat</surfaceType>
+    <comps>
+      <li>
+        <compClass>CompGatherSpot</compClass>
+      </li>
+			<li Class="CompProperties_RoomIdentifier">
+				<roomStat>Impressiveness</roomStat>
+			</li>
+    </comps>
+  </ThingDef>
+
+
+  <ThingDef ParentName="TableBase">
+    <defName>Uvhash_CastingAltar</defName>
+    <label>casting altar</label>
+    <thingClass>CultOfUvhash.Building_CastingAltar</thingClass>
+    <resourcesFractionWhenDeconstructed>1.0</resourcesFractionWhenDeconstructed>
+  	<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <costStuffCount>100</costStuffCount>
+    <costList>
+	  <Uvhash_NecronomiconI>1</Uvhash_NecronomiconI>
+    </costList>
+    <graphicData>
+      <texPath>Building/CastingAltar</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(1,1)</drawSize>
+      <!--
+      <damageData>
+        <rect>(0.05,0.27,1.9,1.73)</rect>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    -->
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>1500</WorkToBuild>
+      <Mass>10</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>1</Beauty>
+    </statBases>
+    <size>(1,1)</size>
+    <rotatable>true</rotatable>
+  </ThingDef>
+
 </ThingDefs>

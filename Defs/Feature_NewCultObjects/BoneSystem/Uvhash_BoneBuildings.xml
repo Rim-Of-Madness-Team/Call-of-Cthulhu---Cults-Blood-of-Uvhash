@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+  <ThingDef Name="BoneBuildingBase" Abstract="True">
+    <category>Building</category>
+    <thingClass>Building</thingClass>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <selectable>true</selectable>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+  </ThingDef>
+
+  <!-- Skull Throne -->
+
+  <ThingDef ParentName="BoneBuildingBase">
+    <defName>Uvhash_SkullThrone</defName>
+    <label>skull throne</label>
+    <Description>Simply referred to as a blood factory, this iron maiden takes in a corpse or live body and quickly drains them of blood.</Description>
+    <thingClass>CultOfUvhash.Building_SkullThrone</thingClass>
+    <category>Building</category>
+    <size>(3,2)</size>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <graphicData> <!-- This is the "open" or "empty" graphic -->
+      <texPath>Building/SkullThroneComplete</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <damageData>
+        <rect>(0.05,0.1,0.9,0.9)</rect>
+      </damageData>
+	  	  <drawSize>(4,2)</drawSize>
+    </graphicData>
+    <building>
+      <isSittable>true</isSittable>
+    </building>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Standable</passability>
+    <fillPercent>0.45</fillPercent>
+    <pathCost>60</pathCost>
+    <statBases>
+      <WorkToBuild>600</WorkToBuild>
+      <Mass>10</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Comfort>0.3</Comfort>
+    </statBases>
+    <costList>
+      <Uvhash_Bone>250</Uvhash_Bone>
+    </costList>
+    <tickerType>Normal</tickerType>
+    <rotatable>true</rotatable>
+    <designationCategory>Production</designationCategory>
+    <constructEffect>ConstructWood</constructEffect>
+    <researchPrerequisites><li>Forbidden_Studies</li></researchPrerequisites>
+  </ThingDef>
+
+  <!-- ===================================================================== -->
+  <!-- ======================== Beast Statue =============================== -->
+  <!-- ===================================================================== -->
+
+
+    <ThingDef ParentName="BoneBuildingBase">
+      <defName>Uvhash_SkeletalSculpture</defName>
+      <label>skeletal sculpture (nightgaunt)</label>
+      <Description>Formed of different bones from different creatures and draped with skins, this grotesque resembles a skeletal nightgaunt. According to legend, nightgaunts are faceless slick-black winged creatures that are said to toy with prey.</Description>
+      <thingClass>Building</thingClass>
+      <category>Building</category>
+      <size>(2,2)</size>
+      <minifiedDef>MinifiedFurniture</minifiedDef>
+      <graphicData>
+        <texPath>Building/Grotesque</texPath>
+        <graphicClass>Graphic_Single</graphicClass>
+        <damageData>
+          <rect>(0.05,0.1,0.9,0.9)</rect>
+        </damageData>
+  	  	<drawSize>(3.5,3.5)</drawSize>
+      </graphicData>
+      <building>
+        <isSittable>true</isSittable>
+      </building>
+      <altitudeLayer>Building</altitudeLayer>
+      <passability>Standable</passability>
+      <fillPercent>0.45</fillPercent>
+      <pathCost>60</pathCost>
+      <statBases>
+        <WorkToBuild>600</WorkToBuild>
+        <Mass>10</Mass>
+        <MaxHitPoints>100</MaxHitPoints>
+        <Flammability>1.0</Flammability>
+        <Comfort>0.3</Comfort>
+      </statBases>
+      <costList>
+        <Uvhash_Bone>100</Uvhash_Bone>
+      </costList>
+      <tickerType>Normal</tickerType>
+      <rotatable>true</rotatable>
+      <designationCategory>Production</designationCategory>
+      <constructEffect>ConstructWood</constructEffect>
+      <researchPrerequisites><li>Forbidden_Studies</li></researchPrerequisites>
+    </ThingDef>
+
+    <!-- ======================== Lighting ======================= -->
+
+    <ThingDef ParentName="BuildingBase">
+      <defName>Uvhash_SkeletalCandles</defName>
+      <label>skull and candles</label>
+      <description>Candles surrounding a skull and skeletal debris for lighting an area. Can be automatically refueled with wax. Produces a small amount of heat.</description>
+      <thingClass>Building</thingClass>
+      <category>Building</category>
+      <graphicData>
+        <texPath>Building/SkullCandles</texPath>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <damageData>
+          <rect>(0.35,0.35,0.3,0.3)</rect>
+        </damageData>
+      </graphicData>
+      <altitudeLayer>Building</altitudeLayer>
+      <passability>PassThroughOnly</passability>
+      <pathCost>8</pathCost>
+      <constructEffect>ConstructWood</constructEffect>
+      <tickerType>Normal</tickerType>
+      <drawerType>RealtimeOnly</drawerType>
+      <fillPercent>0.15</fillPercent>
+      <statBases>
+        <MaxHitPoints>80</MaxHitPoints>
+        <WorkToBuild>200</WorkToBuild>
+        <Flammability>0</Flammability>
+      </statBases>
+      <selectable>true</selectable>
+      <costList>
+        <Uvhash_Bone>25</Uvhash_Bone>
+      </costList>
+      <soundImpactDefault>BulletImpactGround</soundImpactDefault>
+      <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+      <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
+      <placeWorkers>
+        <li>PlaceWorker_Heater</li>
+      </placeWorkers>
+      <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+      <comps>
+        <li Class="CompProperties_Refuelable">
+          <fuelConsumptionRate>2.2</fuelConsumptionRate>
+          <fuelCapacity>20.0</fuelCapacity>
+          <fuelConsumptionPerTickInRain>0.0006</fuelConsumptionPerTickInRain>
+          <fuelFilter>
+            <thingDefs>
+              <li>WoodLog</li>
+            </thingDefs>
+          </fuelFilter>
+          <destroyOnNoFuel>true</destroyOnNoFuel>
+        </li>
+        <li Class="CompProperties_Glower">
+          <glowRadius>10</glowRadius>
+          <glowColor>(252,187,113,0)</glowColor>
+        </li>
+        <li Class="CompProperties_HeatPusher">
+          <heatPerSecond>3.5</heatPerSecond>
+          <heatPushMaxTemperature>23</heatPushMaxTemperature>
+        </li>
+        <li Class="CompProperties_FireOverlay">
+          <fireSize>0.4</fireSize>
+          <offset>(0,0,0.2)</offset>
+        </li>
+      </comps>
+      <designationCategory>Furniture</designationCategory>
+      <designationHotKey>Misc10</designationHotKey>
+    </ThingDef>
+
+
+      <!--========================= Walls =============================-->
+
+
+
+      <ThingDef ParentName="BuildingBase" Name="Wall">
+        <defName>Uvhash_SkeletonWall</defName>
+        <label>ossuary</label>
+        <thingClass>Building</thingClass>
+        <category>Building</category>
+        <description>An impassable wall that serves as the final resting place of skeletal remains. Capable of holding up a roof.</description>
+        <graphicData>
+          <texPath>LinkedBuilding/Uvhash_SkullWall</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <linkType>Basic</linkType>
+          <linkFlags>
+            <li>Wall</li>
+            <li>Rock</li>
+          </linkFlags>
+          <damageData>
+            <cornerTL>Damage/Corner</cornerTL>
+            <cornerTR>Damage/Corner</cornerTR>
+            <cornerBL>Damage/Corner</cornerBL>
+            <cornerBR>Damage/Corner</cornerBR>
+            <edgeTop>Damage/Edge</edgeTop>
+            <edgeBot>Damage/Edge</edgeBot>
+            <edgeLeft>Damage/Edge</edgeLeft>
+            <edgeRight>Damage/Edge</edgeRight>
+          </damageData>
+        </graphicData>
+        <blueprintGraphicData>
+          <texPath>Things/Building/Linked/Wall_Blueprint_Atlas</texPath>
+        </blueprintGraphicData>
+        <uiIconPath>LinkedBuilding/WallBones_MenuIcon</uiIconPath>
+        <statBases>
+          <MaxHitPoints>350</MaxHitPoints>
+          <WorkToBuild>150</WorkToBuild>
+          <Flammability>1.0</Flammability>
+        </statBases>
+        <costStuffCount>5</costStuffCount>
+        <stuffCategories>
+          <li>Uvhash_Boney</li>
+        </stuffCategories>
+        <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>Impassable</passability>
+        <blockWind>true</blockWind>
+        <castEdgeShadows>true</castEdgeShadows>
+        <fillPercent>1</fillPercent>
+        <coversFloor>true</coversFloor>
+        <placingDraggableDimensions>1</placingDraggableDimensions>
+        <tickerType>Never</tickerType>
+        <rotatable>false</rotatable>
+        <selectable>true</selectable>
+        <neverMultiSelect>true</neverMultiSelect>
+        <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+        <holdsRoof>true</holdsRoof>
+        <designationCategory>Structure</designationCategory>
+        <staticSunShadowHeight>1.0</staticSunShadowHeight>
+        <blockLight>true</blockLight>
+        <canOverlapZones>false</canOverlapZones>
+        <building>
+          <isInert>true</isInert>
+          <ignoreNeedsPower>true</ignoreNeedsPower>
+        </building>
+        <damageMultipliers>
+          <li>
+            <damageDef>Bomb</damageDef>
+            <multiplier>2</multiplier>
+          </li>
+        </damageMultipliers>
+        <designationHotKey>Misc3</designationHotKey>
+      </ThingDef>
+
+</ThingDefs>

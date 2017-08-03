@@ -10,3 +10,6 @@ D:\SteamLibrary\steamapps\common\RimWorld\Mods\Call of Cthulhu - Cults - Blood o
 D:\SteamLibrary\steamapps\common\RimWorld\Mods\Call of Cthulhu - Cults - Blood of Uvhash 1.0 A16\Source\CultOfUvhash\CultOfUvhash\obj\Debug\CultOfUvhash.csprojResolveAssemblyReference.cache
 D:\SteamLibrary\steamapps\common\RimWorld\Mods\Call of Cthulhu - Cults - Blood of Uvhash 1.0 A16\Source\CultOfUvhash\CultOfUvhash\obj\Debug\CultOfUvhash.dll
 D:\SteamLibrary\steamapps\common\RimWorld\Mods\Call of Cthulhu - Cults - Blood of Uvhash 1.0 A16\Assemblies\CultOfUvhash.dll
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Call-of-Cthulhu---Cults---Blood-of-Uvhash\Source\CultOfUvhash\CultOfUvhash\obj\Debug\CultOfUvhash.csprojResolveAssemblyReference.cache
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Call-of-Cthulhu---Cults---Blood-of-Uvhash\Source\CultOfUvhash\CultOfUvhash\obj\Debug\CultOfUvhash.dll
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Call-of-Cthulhu---Cults---Blood-of-Uvhash\Assemblies\CultOfUvhash.dll

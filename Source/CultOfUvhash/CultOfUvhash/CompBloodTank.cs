@@ -47,7 +47,7 @@ namespace CultOfUvhash
         public override void PostExposeData()
         {
             base.PostExposeData();
-            Scribe_Values.LookValue<float>(ref this.storedBlood, "storedBlood", 0f, false);
+            Scribe_Values.Look<float>(ref this.storedBlood, "storedBlood", 0f, false);
             CompProperties_BloodTank props = this.Props;
             if (this.storedBlood > props.storedBloodMax)
             {
@@ -58,7 +58,7 @@ namespace CultOfUvhash
             {
                 thing = this.connectParent.parent;
             }
-            Scribe_References.LookReference<Thing>(ref thing, "parentThing", false);
+            Scribe_References.Look<Thing>(ref thing, "parentThing", false);
             if (thing != null)
             {
                 this.connectParent = ((ThingWithComps)thing).GetComp<CompBloodTank>();
@@ -111,8 +111,7 @@ namespace CultOfUvhash
             s.AppendLine(base.CompInspectStringExtra());
             s.AppendLine("BloodTankStored".Translate() + ": " + this.storedBlood.ToString("F") + " / " + props.storedBloodMax.ToString("F") + " " + "BloodTankLitres".Translate());
             s.AppendLine("BloodTankEfficiency".Translate() + ": " + (props.efficiency * 100f).ToString("F0") + "%");
-            string str = s.ToString().TrimEndNewlines();
-            return str;
+            return s.ToString().TrimEndNewlines();
         }
 
         public bool TransmitsBloodNow
@@ -192,10 +191,11 @@ namespace CultOfUvhash
             }
             return parentCandidate;
         }
-        
-        public override void PostSpawnSetup()
+
+
+        public override void PostSpawnSetup(bool respawningAfterLoad)
         {
-            base.PostSpawnSetup();
+            base.PostSpawnSetup(respawningAfterLoad);
             if (this.Props.transmitsBlood)
             {
                 this.parent.Map.mapDrawer.MapMeshDirty(this.parent.Position, MapMeshFlag.PowerGrid, true, false);

@@ -14,7 +14,7 @@ using System.Reflection;
 
 namespace CultOfUvhash
 {
-    public class Building_BloodFactory : Building_Casket, IThingContainerOwner
+    public class Building_BloodFactory : Building_Casket, IThingHolder
     {
         private bool isLoading = false;
 
@@ -90,21 +90,17 @@ namespace CultOfUvhash
             //this.container = new ThingContainer(this, false, LookMode.Deep);
             this.rareTicks = 250;
         }
-
-        public override void SpawnSetup(Map map)
-        {
-            base.SpawnSetup(map);
-        }
+        
 
         public Thing Occupant
         {
             get
             {
                 Thing occupant = null;
-                if (GetInnerContainer().Count != 0)
+                if (this.innerContainer.Count != 0)
                 {
                     IntVec3 intVec = this.RandomAdjacentCell8Way();
-                    foreach (Thing t in GetInnerContainer())
+                    foreach (Thing t in this.innerContainer)
                     {
                         occupant = t;
                     }
@@ -205,8 +201,8 @@ namespace CultOfUvhash
             Cthulhu.Utility.DebugReport("Force load called");
             Job job = new Job(DefDatabase<JobDef>.GetNamed("BloodHaulPrisoner"), sacrifice, this);
             job.count = 1;
-            executioner.QueueJob(job);
-            executioner.jobs.EndCurrentJob(JobCondition.InterruptForced);
+            executioner.jobs.TryTakeOrderedJob(job);
+            //executioner.jobs.EndCurrentJob(JobCondition.InterruptForced);
             lastLoader = executioner;
             Cthulhu.Utility.DebugReport("Load state set to gathering");
         }
@@ -401,13 +397,16 @@ namespace CultOfUvhash
         {
             if (IsLoaded)
             {
-                if (GetInnerContainer().Count != 0)
+                if (this.innerContainer.Count != 0)
                 {
                     if (NearestBloodTank != null)
                     {
                         float difference = 0.0f;
                         bloodLoaded = DetermineBloodRemaining(Occupant, out difference);
-                        if (difference > 0.0f) NearestBloodTank.TryGetComp<CompBloodTank>().AddBlood(difference);
+                        if (difference > 0.0f) {
+                            NearestBloodTank.TryGetComp<CompBloodTank>().AddBlood(difference);
+                            FilthMaker.MakeFilth(this.Position.RandomAdjacentCell8Way(), this.Map, ThingDefOf.FilthBlood);
+                        }
                     }
                 }
             }
@@ -441,9 +440,9 @@ namespace CultOfUvhash
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_Values.LookValue<bool>(ref this.isLoading, "isLoading", true, false);
-            Scribe_Values.LookValue<float>(ref this.bloodLoaded, "bloodLoaded", 0.0f);
-            Scribe_Values.LookValue<int>(ref this.rareTicks, "rareTicks", 250, false);
+            Scribe_Values.Look<bool>(ref this.isLoading, "isLoading", true, false);
+            Scribe_Values.Look<float>(ref this.bloodLoaded, "bloodLoaded", 0.0f);
+            Scribe_Values.Look<int>(ref this.rareTicks, "rareTicks", 250, false);
         }
 
         public override string GetInspectString()
@@ -457,7 +456,7 @@ namespace CultOfUvhash
                         (bloodLoaded).ToString("F")
                     }));
             }
-            return stringBuilder.ToString();
+            return stringBuilder.ToString().TrimEndNewlines();
         }
 
         public override IEnumerable<Gizmo> GetGizmos()

@@ -55,6 +55,8 @@
     <Compile Include="Building_BloodHub.cs" />
     <Compile Include="Building_BloodFactory.cs" />
     <Compile Include="Building_BloodRune.cs" />
+    <Compile Include="Building_CastingAltar.cs" />
+    <Compile Include="Building_SkullThrone.cs" />
     <Compile Include="CompBloodTank.cs" />
     <Compile Include="CompProperties_BloodTank.cs" />
     <Compile Include="CthulhuUtility.cs" />
@@ -63,6 +65,9 @@
     <Compile Include="PlaceWorker_NextToBloodCollectorAccepter.cs" />
     <Compile Include="Projectile_BloodMist.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThingWithComps_Necronomicon.cs" />
+    <Compile Include="UvhashDefOf.cs" />
+    <Compile Include="WorldComponent_Uvhash.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

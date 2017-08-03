@@ -138,7 +138,8 @@ namespace CultOfUvhash
             this.Takee.Notify_Teleported(false);
             this.Takee.stances.CancelBusyStanceHard();
             //....the pit
-            this.DropPoint.GetInnerContainer().TryAdd(Takee);
+            this.Takee.DeSpawn();
+            this.DropPoint.TryGetInnerInteractableThingOwner().TryAdd(Takee);
             //this.DropPoint.IsLoaded = true;
             
             //Record a tale

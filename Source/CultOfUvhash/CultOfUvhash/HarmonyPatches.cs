@@ -9,7 +9,7 @@ using Verse.AI;
 using System.Reflection;
 using UnityEngine;
 
-namespace CompActivatableEffect
+namespace CultOfUvhash
 {
     [StaticConstructorOnStartup]
     static class HarmonyPatches
@@ -18,6 +18,17 @@ namespace CompActivatableEffect
         {
             HarmonyInstance harmony = HarmonyInstance.Create("rimworld.jecrell.uvhash");
             harmony.Patch(typeof(Pawn).GetMethod("ButcherProducts"), null, new HarmonyMethod(typeof(HarmonyPatches).GetMethod("ButcherProducts_PostFix")));
+            harmony.Patch(typeof(Pawn_RecordsTracker).GetMethod("Increment"), null, new HarmonyMethod(typeof(HarmonyPatches).GetMethod("Increment_PostFix")), null);
+        }
+
+        public static void Increment_PostFix(Pawn_RecordsTracker __instance, RecordDef def)
+        {
+            if (Find.World.GetComponent<WorldComponent_Uvhash>() is WorldComponent_Uvhash uvhashComp &&
+                !uvhashComp.spawnedCrystal &&
+                def == RecordDefOf.CellsMined)
+            {
+                uvhashComp.DecrementCellsUntilCrystalCount((Pawn)AccessTools.Field(typeof(Pawn_RecordsTracker), "pawn").GetValue(__instance));
+            }
         }
 
         public static readonly float boneDivisor = 2f;

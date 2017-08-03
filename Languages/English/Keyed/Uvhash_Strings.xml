@@ -3,6 +3,10 @@
 
 	<!-- Uvhash 1.0 -->
 
+  <BloodCrystalEventLabel>Blood Crystal Discovered</BloodCrystalEventLabel>
+	<BloodCrystalEventDesc>After picking away a cluster of hardened stone, {0} unearthed a strange crystal protruding from the crumbling layers. Its magnificent luminescence seemed to call to {0}. As they touched its surface, {0} accidentally cut themselves on the unexpectedly sharp edges.\n\nTo their horror, the crystal pulled itself from the earth and levitated before them. It bobbed and gravitated towards them slowly, a strange low hum breaking the silence. Utilizing some unknown possibly magnetic force, the crystal drew more blood from {0}'s wound. It seeped into the air, the red, thick substance transformed into a mist, spreading over the crystal and into it. It ceased when {0} had hidden their cut. The humming stopped, and the crystal fell to the ground.\n\nThough shaken by the traumatic encounter, some believe it could serve the colony well if one were to study the anomalous entity closely and with careful observation.</BloodCrystalEventDesc>
+  <BloodCommandBuildCastingAltar>Build Casting Altar</BloodCommandBuildCastingAltar>
+	<BloodCommandBuildCastingAltarDesc>Constructs a casting altar to utilize powerful blood magic.</BloodCommandBuildCastingAltarDesc>
 	<BloodTankStored>Stored</BloodTankStored>
 	<BloodTankEfficiency>Efficiency</BloodTankEfficiency>
 	<BloodTankLitres>litres</BloodTankLitres>
@@ -24,6 +28,6 @@
 	<BloodCommandExtractDesc>Extract {0} litres of blood from the blood tank.</BloodCommandExtractDesc>
 	<MustPlaceNextToBloodCollectorAccepter>Must be placed next to something that needs a blood collector.</MustPlaceNextToBloodCollectorAccepter>
 	<BloodTankFull>Blood tank is full to capacity.</BloodTankFull>
-	
-	
+
+
 </LanguageData>

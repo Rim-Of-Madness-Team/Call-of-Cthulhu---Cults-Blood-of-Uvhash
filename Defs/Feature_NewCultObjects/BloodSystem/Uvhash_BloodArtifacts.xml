@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Resources>
+
+<ThingDef Name="Uvhash_BloodCrystal">
+<defName>Uvhash_BloodCrystal</defName>
+  <thingClass>ThingWithComps</thingClass>
+<label>blood crystal</label>
+<description>Discovered during mining operations, this impossible crystal collects and pulls blood from incredible distances.</description>
+  <graphicData>
+    <texPath>Misc/BloodCrystal</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+    <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+  </graphicData>
+  <soundInteract>InteractPistol</soundInteract>
+  <category>Item</category>
+  <pathCost>10</pathCost>
+  <useHitPoints>true</useHitPoints>
+<selectable>true</selectable>
+  <drawGUIOverlay>true</drawGUIOverlay>
+  <statBases>
+    <WorkToMake>2000</WorkToMake>
+    <MarketValue>20</MarketValue>
+    <MaxHitPoints>20</MaxHitPoints>
+    <Flammability>1.0</Flammability>
+    <DeteriorationRate>0</DeteriorationRate>
+    <SellPriceFactor>0.25</SellPriceFactor>
+  </statBases>
+  <costList>
+    <WoodLog>1</WoodLog>
+  </costList>
+  <tradeNeverStack>true</tradeNeverStack>
+  <altitudeLayer>Item</altitudeLayer>
+  <alwaysHaulable>True</alwaysHaulable>
+  <tickerType>Never</tickerType>
+  <techLevel>Industrial</techLevel>
+  <thingCategories>
+    <li>Artifacts</li>
+  </thingCategories>
+  <tradeTags>
+    <li>Artifact</li>
+  </tradeTags>
+  <inspectorTabs>
+    <li>ITab_Art</li>
+  </inspectorTabs>
+  <comps>
+    <li Class="CompProperties_Forbiddable"/>
+  </comps>
+</ThingDef>
+
+  <ThingDef Name="Uvhash_NecronomiconI">
+	<defName>Uvhash_NecronomiconI</defName>
+    <thingClass>CultOfUvhash.ThingWithComps_Necronomicon</thingClass>
+	<label>fragmented necronomicon</label>
+	<description>Purportedly authored by the Mad Arab Abdul Alhazred, the necronomicon contains accounts of the old ones and how to summon them. The papers that line this copy are veined with bloody ink and still copper scented. This volume is incomplete, however, a large chapter on thaumaturgy, also known as blood magic, remains in-tact.</description>
+    <graphicData>
+      <texPath>Misc/Necronomicon</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <soundInteract>InteractPistol</soundInteract>
+    <category>Item</category>
+    <pathCost>10</pathCost>
+    <useHitPoints>true</useHitPoints>
+	<selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <statBases>
+      <WorkToMake>2000</WorkToMake>
+      <MarketValue>20</MarketValue>
+      <MaxHitPoints>20</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+      <SellPriceFactor>0.25</SellPriceFactor>
+    </statBases>
+    <costList>
+      <WoodLog>1</WoodLog>
+    </costList>
+    <tradeNeverStack>true</tradeNeverStack>
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>True</alwaysHaulable>
+    <tickerType>Never</tickerType>
+    <techLevel>Industrial</techLevel>
+    <thingCategories>
+      <li>Artifacts</li>
+    </thingCategories>
+    <tradeTags>
+      <li>Artifact</li>
+    </tradeTags>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+    </comps>
+  </ThingDef>
+
+</Resources>

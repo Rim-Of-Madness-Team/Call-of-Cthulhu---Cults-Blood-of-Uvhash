@@ -1,32 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-
-  <!--================== Bases ==================-->
-  
-  <ThingDef Name="ResourceBase" Abstract="True">
-    <thingClass>ThingWithComps</thingClass>
-    <category>Item</category>
-    <resourceReadoutPriority>Middle</resourceReadoutPriority>
-    <useHitPoints>true</useHitPoints>
-    <selectable>true</selectable>
-    <altitudeLayer>Item</altitudeLayer>
-    <stackLimit>75</stackLimit>
-		<statBases>
-			<Beauty>-7</Beauty>
-		</statBases>
-		<comps>
-			<li Class="CompProperties_Forbiddable"/>
-		</comps>
-		<alwaysHaulable>true</alwaysHaulable>
-		<drawGUIOverlay>true</drawGUIOverlay>
-		<rotatable>false</rotatable>
-		<pathCost>15</pathCost>
-	</ThingDef>
-
+  <StuffCategoryDef>
+    <defName>Uvhash_Boney</defName>
+    <label>boney</label>
+  </StuffCategoryDef>
 
   <!--=============== Bone ====================-->
-  
+
   <ThingDef Name="ResourceVerbBase" ParentName="ResourceBase" Abstract="True">
     <equipmentType>Primary</equipmentType>
     <techLevel>Neolithic</techLevel>
@@ -36,14 +17,16 @@
       </li>
     </comps>
   </ThingDef>
-  
+
   <ThingDef ParentName="ResourceVerbBase">
     <defName>Uvhash_Bone</defName>
     <label>bone</label>
     <description>Recovered calcified piece from the skeleton a flesh-based creature.</description>
     <graphicData>
       <texPath>Misc/Bone</texPath>
-      <graphicClass>Graphic_StackCount</graphicClass>
+      <graphicClass>Graphic_Random</graphicClass>
+      <color>(255,255,255)</color>
+      <drawSize>1.0</drawSize>
     </graphicData>
     <equippedAngleOffset>-20</equippedAngleOffset>
     <soundInteract>Wood_Drop</soundInteract>
@@ -62,10 +45,11 @@
     <stuffProps>
       <stuffAdjective>bone</stuffAdjective>
       <categories>
-        <li>Metallic</li>
+        <li>Stony</li>
+        <li>Uvhash_Boney</li>
       </categories>
       <commonality>1.00</commonality>
-      <color>(133,97,67)</color>
+      <color>(237,235,223)</color>
       <constructEffect>ConstructWood</constructEffect>
       <appearance>Planks</appearance>
       <soundImpactStuff>BulletImpactWood</soundImpactStuff>
@@ -99,5 +83,5 @@
       </li>
     </verbs>
   </ThingDef>
-  
-</Defs>  
+
+</Defs>

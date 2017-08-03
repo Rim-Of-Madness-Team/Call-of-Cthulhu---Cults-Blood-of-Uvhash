@@ -3,25 +3,25 @@
 
 <ThingDef Class="CultOfCthulhu.CosmicEntityDef">
 	<defName>Entity_Uvhash</defName>
-    <thingClass>CultOfCthulhu.CosmicEntity</thingClass>	
+    <thingClass>CultOfCthulhu.CosmicEntity</thingClass>
 	<label>Uvhash</label>
 	<version>1</version>
 	<description>The Blood Mad God of the Void thrives on one thing -- blood.</description>
-    <symbol>Mote/Symbols/Cthulhu</symbol>	
+    <symbol>Mote/Symbols/Cthulhu</symbol>
 	<tier1SpellDefs>
-		<li>SpellFavor</li>
-		<li>SpellOrbitalInsanityWave</li>	
-		<li>SpellAspectOfCthulhu</li>
+		<li>Cults_SpellFavor</li>
+		<li>Cults_SpellOrbitalInsanityWave</li>
+		<li>Cults_SpellAspectOfCthulhu</li>
 	</tier1SpellDefs>
 	<tier2SpellDefs>
-		<li>SpellPsionicGrowth</li>
+		<li>Cults_SpellPsionicGrowth</li>
 	</tier2SpellDefs>
 	<tier3SpellDefs>
-		<li>SpellTerrestrialInsanityWave</li>
+		<li>Cults_SpellTerrestrialInsanityWave</li>
 	</tier3SpellDefs>
-	<finalSpellDef>SpellAwakenCthulhu</finalSpellDef>
+	<finalSpellDef>Cults_SpellAwakenCthulhu</finalSpellDef>
 	<favoredApparel>
-		<li>Apparel_CthulhuMaskHood</li>
+		<li>Apparel_ROMCthulhuRobes</li>
 	</favoredApparel>
 </ThingDef>
 

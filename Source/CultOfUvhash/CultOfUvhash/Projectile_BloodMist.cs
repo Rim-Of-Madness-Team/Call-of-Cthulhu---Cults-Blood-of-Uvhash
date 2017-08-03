@@ -40,7 +40,7 @@ namespace CultOfUvhash
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_Values.LookValue<float>(ref this.bloodAmount, "bloodAmount", 0.0f);
+            Scribe_Values.Look<float>(ref this.bloodAmount, "bloodAmount", 0.0f);
         }
     }
 }
