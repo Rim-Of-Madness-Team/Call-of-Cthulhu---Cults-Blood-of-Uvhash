@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-<ThingDef Class="CultOfCthulhu.CosmicEntityDef">
+<CultOfCthulhu.CosmicEntityDef>
 	<defName>Entity_Uvhash</defName>
     <thingClass>CultOfCthulhu.CosmicEntity</thingClass>
 	<label>Uvhash</label>
@@ -23,6 +23,6 @@
 	<favoredApparel>
 		<li>Apparel_ROMCthulhuRobes</li>
 	</favoredApparel>
-</ThingDef>
+</CultOfCthulhu.CosmicEntityDef>
 
 </Defs>

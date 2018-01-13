@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<Resources>
+<Defs>
 
 <ThingDef Name="Uvhash_BloodCrystal">
 <defName>Uvhash_BloodCrystal</defName>
@@ -93,4 +93,4 @@
     </comps>
   </ThingDef>
 
-</Resources>
+</Defs>

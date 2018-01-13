@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ThingDefs>
+<Defs>
 
   <ThingDef Name="BloodBuildingBase" Abstract="True">
     <category>Building</category>
@@ -228,4 +228,4 @@
     <rotatable>true</rotatable>
   </ThingDef>
 
-</ThingDefs>
+</Defs>
