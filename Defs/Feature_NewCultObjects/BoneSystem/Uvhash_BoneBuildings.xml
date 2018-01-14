@@ -18,7 +18,7 @@
   <ThingDef ParentName="BoneBuildingBase">
     <defName>Uvhash_SkullThrone</defName>
     <label>skull throne</label>
-    <Description>Simply referred to as a blood factory, this iron maiden takes in a corpse or live body and quickly drains them of blood.</Description>
+    <description>Simply referred to as a blood factory, this iron maiden takes in a corpse or live body and quickly drains them of blood.</description>
     <thingClass>CultOfUvhash.Building_SkullThrone</thingClass>
     <category>Building</category>
     <size>(3,2)</size>
@@ -63,7 +63,7 @@
     <ThingDef ParentName="BoneBuildingBase">
       <defName>Uvhash_SkeletalSculpture</defName>
       <label>skeletal sculpture (nightgaunt)</label>
-      <Description>Formed of different bones from different creatures and draped with skins, this grotesque resembles a skeletal nightgaunt. According to legend, nightgaunts are faceless slick-black winged creatures that are said to toy with prey.</Description>
+      <description>Formed of different bones from different creatures and draped with skins, this grotesque resembles a skeletal nightgaunt. According to legend, nightgaunts are faceless slick-black winged creatures that are said to toy with prey.</description>
       <thingClass>Building</thingClass>
       <category>Building</category>
       <size>(2,2)</size>
@@ -230,7 +230,6 @@
         <canOverlapZones>false</canOverlapZones>
         <building>
           <isInert>true</isInert>
-          <ignoreNeedsPower>true</ignoreNeedsPower>
         </building>
         <damageMultipliers>
           <li>
@@ -238,7 +237,7 @@
             <multiplier>2</multiplier>
           </li>
         </damageMultipliers>
-        <designationHotKey>Misc3</designationHotKey>
+		<researchPrerequisites><li>Forbidden_Studies</li></researchPrerequisites>	
       </ThingDef>
 
 </Defs>

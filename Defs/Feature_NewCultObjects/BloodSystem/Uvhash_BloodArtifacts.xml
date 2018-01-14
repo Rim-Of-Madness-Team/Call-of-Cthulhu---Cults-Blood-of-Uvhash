@@ -11,7 +11,7 @@
     <graphicClass>Graphic_Single</graphicClass>
     <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
   </graphicData>
-  <soundInteract>InteractPistol</soundInteract>
+  <soundInteract>ChunkRock_Drop</soundInteract>
   <category>Item</category>
   <pathCost>10</pathCost>
   <useHitPoints>true</useHitPoints>
@@ -57,7 +57,6 @@
       <graphicClass>Graphic_Single</graphicClass>
       <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
     </graphicData>
-    <soundInteract>InteractPistol</soundInteract>
     <category>Item</category>
     <pathCost>10</pathCost>
     <useHitPoints>true</useHitPoints>

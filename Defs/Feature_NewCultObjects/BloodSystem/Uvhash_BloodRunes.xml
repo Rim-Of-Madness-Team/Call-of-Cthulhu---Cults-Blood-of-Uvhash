@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ThingDefs>
+<Defs>
 
 
   <ThingDef Name="RuneBase" Abstract="True">
@@ -17,27 +17,26 @@
   <ThingDef ParentName="RuneBase">
     <defName>ROM_RuneOf</defName>
     <label>sign of Dagon</label>
-    <Description>Designates a spot where the guardians of the deep may roam. It's recommended to keep these magic circles outside of the colony. Once they arrive, the guardians will defend the spot the circle originated at until their death. Avoid bringing colonists near their circle.</Description>
+    <description>Designates a spot where the guardians of the deep may roam. It's recommended to keep these magic circles outside of the colony. Once they arrive, the guardians will defend the spot the circle originated at until their death. Avoid bringing colonists near their circle.</description>
     <thingClass>CultOfCthulhu.Building_SignOfDagon</thingClass>
     <graphicData>
       <texPath>Building/SignOfDagon/ROMSignOfDagon</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(3,3)</drawSize>
     </graphicData>
-    <AltitudeLayer>FloorEmplacement</AltitudeLayer>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
     <statBases>
       <WorkToBuild>50</WorkToBuild>
     </statBases>
     <useHitPoints>False</useHitPoints>
-    <Size>(3,3)</Size>
-    <DesignationCategory>Misc</DesignationCategory>
-    <Passability>Standable</Passability>
+    <size>(3,3)</size>
+    <designationCategory>Misc</designationCategory>
+    <passability>Standable</passability>
     <building>
       <sowTag>SupportPlantsOnly</sowTag>
       <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
     </building>
 	<researchPrerequisites><li>Forbidden_Studies</li></researchPrerequisites>
-    <designationHotkey>Misc10</designationHotkey>
   </ThingDef>
 
-</ThingDefs>
+</Defs>

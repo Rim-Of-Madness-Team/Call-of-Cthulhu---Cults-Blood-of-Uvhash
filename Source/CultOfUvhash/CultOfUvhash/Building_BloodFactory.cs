@@ -168,7 +168,7 @@ namespace CultOfUvhash
                 
             //}
             isLoading = false;
-            Messages.Message("BloodBodyLoadable_Cancel".Translate() + " " + reason, MessageSound.Negative);
+            Messages.Message("BloodBodyLoadable_Cancel".Translate() + " " + reason, MessageTypeDefOf.NegativeEvent);
         }
         private void StartLoadingPrisoner(Pawn executioner, Pawn sacrifice)
         {
@@ -195,7 +195,7 @@ namespace CultOfUvhash
                 {
                     executioner.LabelShort,
                     sacrifice.LabelShort
-                }), TargetInfo.Invalid, MessageSound.Standard);
+                }), TargetInfo.Invalid, MessageTypeDefOf.NeutralEvent);
             isLoading = true;
 
             Cthulhu.Utility.DebugReport("Force load called");
@@ -346,7 +346,7 @@ namespace CultOfUvhash
                                 Messages.Message("BloodLossWarning".Translate(new object[]
                                     {
                                 newOccupant.LabelShort
-                                    }), MessageSound.Negative);
+                                    }), MessageTypeDefOf.NegativeEvent);
                             }
                         }
                         else

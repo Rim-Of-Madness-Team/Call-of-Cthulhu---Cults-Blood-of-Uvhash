@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ThingDefs>
+<Defs>
 
   <ThingDef>
     <defName>Uvhash_BloodMist</defName>
@@ -21,4 +21,4 @@
     </projectile>
   </ThingDef>
 
-</ThingDefs>
+</Defs>

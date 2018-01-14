@@ -18,7 +18,7 @@
   <ThingDef ParentName="BloodBuildingBase">
     <defName>Uvhash_BloodFactory_IronMaiden</defName>
     <label>blood factory (iron maiden)</label>
-    <Description>Simply referred to as a blood factory, this iron maiden takes in a corpse or live body and quickly drains them of blood.</Description>
+    <description>Simply referred to as a blood factory, this iron maiden takes in a corpse or live body and quickly drains them of blood.</description>
     <thingClass>CultOfUvhash.Building_BloodFactory</thingClass>
     <category>Building</category>
     <minifiedDef>MinifiedFurniture</minifiedDef>
@@ -66,7 +66,7 @@
   <ThingDef ParentName="BloodBuildingBase">
     <defName>Uvhash_BloodCollector</defName>
     <label>blood collector</label>
-    <Description>This small tank collects blood from particularly horrific devices.</Description>
+    <description>This small tank collects blood from particularly horrific devices.</description>
     <thingClass>CultOfUvhash.Building_BloodCollector</thingClass>
     <category>Building</category>
     <minifiedDef>MinifiedFurniture</minifiedDef>
@@ -116,7 +116,7 @@
   <ThingDef ParentName="BloodBuildingBase">
     <defName>Uvhash_BloodNexus</defName>
     <label>blood nexus</label>
-    <Description>This large pool collects and stores blood.</Description>
+    <description>This large pool collects and stores blood.</description>
     <thingClass>CultOfUvhash.Building_BloodHub</thingClass>
     <category>Building</category>
     <minifiedDef>MinifiedFurniture</minifiedDef>
@@ -139,7 +139,7 @@
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>1.0</Flammability>
     </statBases>
-	  <costList>
+	<costList>
       <Uvhash_BloodCrystal>1</Uvhash_BloodCrystal>
       <Steel>10</Steel>
       <WoodLog>30</WoodLog>
@@ -226,6 +226,7 @@
     </statBases>
     <size>(1,1)</size>
     <rotatable>true</rotatable>
+    <researchPrerequisites><li>Forbidden_Studies</li></researchPrerequisites>	
   </ThingDef>
 
 </Defs>

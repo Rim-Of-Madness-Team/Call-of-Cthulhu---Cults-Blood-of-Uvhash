@@ -33,7 +33,7 @@ namespace CultOfUvhash
         {
             get
             {
-                return (Pawn)base.CurJob.GetTarget(TargetIndex.A).Thing;
+                return (Pawn)base.job.GetTarget(TargetIndex.A).Thing;
             }
         }
 
@@ -41,8 +41,13 @@ namespace CultOfUvhash
         {
             get
             {
-                return (Building_BloodFactory)base.CurJob.GetTarget(TargetIndex.B).Thing;
+                return (Building_BloodFactory)base.job.GetTarget(TargetIndex.B).Thing;
             }
+        }
+
+        public override bool TryMakePreToilReservations()
+        {
+            return true;
         }
 
         [DebuggerHidden]

@@ -79,7 +79,7 @@ namespace CultOfUvhash
             if (amount > this.AmountCanAccept)
             {
                 amount = this.AmountCanAccept;
-                if (Find.TickManager.TicksGame % 250 == 0) Messages.Message("BloodTankFull".Translate(), new RimWorld.Planet.GlobalTargetInfo(this.parent), MessageSound.RejectInput);
+                if (Find.TickManager.TicksGame % 250 == 0) Messages.Message("BloodTankFull".Translate(), new RimWorld.Planet.GlobalTargetInfo(this.parent), MessageTypeDefOf.RejectInput);
                 FilthMaker.MakeFilth(this.parent.PositionHeld.RandomAdjacentCell8Way(), this.parent.MapHeld, ThingDefOf.FilthBlood, 1);
             }
             amount *= this.Props.efficiency;

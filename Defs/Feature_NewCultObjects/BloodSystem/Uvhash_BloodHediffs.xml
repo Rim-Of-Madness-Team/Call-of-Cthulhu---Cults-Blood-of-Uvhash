@@ -16,8 +16,8 @@
     </comps>
     <stages>
       <li>
-        <label>hidden</label>
-        <everVisible>false</everVisible>
+        <label>minor</label>
+		<becomeVisible>false</becomeVisible>
       </li>
       <li>
         <minSeverity>0.2</minSeverity>
