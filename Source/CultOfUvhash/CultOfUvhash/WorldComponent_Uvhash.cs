@@ -9,12 +9,23 @@ using Verse.AI;
 
 namespace CultOfUvhash
 {
+    public enum UvhashStage
+    {
+        None,
+        Communicated,
+        Summoned,
+        Hungry,
+        Awake
+    }
+    
     public class WorldComponent_Uvhash : WorldComponent
     {
         public bool spawnedCrystal = false;
         public bool spawnedNecronomicon = false;
+        public bool triggeredUvhash = false;
         public int minedCellsUntilCrystal = 0;
-
+        public UvhashStage currentStage = UvhashStage.None;
+        
         public WorldComponent_Uvhash(World world) : base(world)
         {
             minedCellsUntilCrystal = Rand.Range(3, 5);
@@ -48,11 +59,28 @@ namespace CultOfUvhash
             }
         }
 
+        public void Notify_UvhashCommunicated(Pawn p)
+        {
+            triggeredUvhash = true;
+            Find.WindowStack.Add(new Dialog_MessageBox("BloodCrystalEventDesc".Translate(new object[]
+            {
+                p.Name.ToStringShort
+            }), "BloodCrystalEventLabel".Translate()));                
+        }
+
+        public void Notify_UvhashSummoned(Pawn p)
+        {
+            
+        }
+
         public override void ExposeData()
         {
             base.ExposeData();
             Scribe_Values.Look<bool>(ref this.spawnedCrystal, "spawnedCrystal", false);
             Scribe_Values.Look<bool>(ref this.spawnedNecronomicon, "spawnedNecronomicon", false);
+            Scribe_Values.Look(ref this.triggeredUvhash, "triggeredUvhash", false);
+            Scribe_Values.Look(ref this.currentStage, "currentStage", UvhashStage.None);
+            Scribe_Values.Look(ref this.minedCellsUntilCrystal, "minedCellsUntilCrystal", 0);
         }
     }
 }

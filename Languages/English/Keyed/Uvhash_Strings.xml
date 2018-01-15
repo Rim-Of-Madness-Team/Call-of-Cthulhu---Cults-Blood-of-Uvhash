@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 
-	<!-- Uvhash 1.0 -->
+   
+
+	<!-- Uvhash B18 -->
+  <UvhashCommunicationEventLabel>The Blood Mad God of the Void</UvhashCommunicationEventLabel>
+  <UvhashCommunicationEventDesc>The blood crystal floated motionless above the surface of its pool. The humming began again, although this time far more humanoid. To those that witnessed it, it seemed as if it had duplicated the very vocal coords of its last victim.\n\nTo the surprise of all, it pulled forth a crimson mist from the blood containers. As the blood struck the crystal, it soaked itself in the liquid. Excess liquid began to drip into the pool below. This time, however, the crystal did not collapse. It stayed afloat, as if suspended tightly by unseen strands like how a spider maintains its web.
+  </UvhashCommunicationEventDesc>
+	
+	<!-- Uvhash A17 -->
 
   <BloodCrystalEventLabel>Blood Crystal Discovered</BloodCrystalEventLabel>
 	<BloodCrystalEventDesc>After picking away a cluster of hardened stone, {0} unearthed a strange crystal protruding from the crumbling layers. Its magnificent luminescence seemed to call to {0}. As they touched its surface, {0} accidentally cut themselves on the unexpectedly sharp edges.\n\nTo their horror, the crystal pulled itself from the earth and levitated before them. It bobbed and gravitated towards them slowly, a strange low hum breaking the silence. Utilizing some unknown possibly magnetic force, the crystal drew more blood from {0}'s wound. It seeped into the air, the red, thick substance transformed into a mist, spreading over the crystal and into it. It ceased when {0} had hidden their cut. The humming stopped, and the crystal fell to the ground.\n\nThough shaken by the traumatic encounter, some believe it could serve the colony well if one were to study the anomalous entity closely and with careful observation.</BloodCrystalEventDesc>
