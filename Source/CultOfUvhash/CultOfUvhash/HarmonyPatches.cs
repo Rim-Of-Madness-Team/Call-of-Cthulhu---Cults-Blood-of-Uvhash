@@ -18,16 +18,30 @@ namespace CultOfUvhash
         {
             HarmonyInstance harmony = HarmonyInstance.Create("rimworld.jecrell.uvhash");
             harmony.Patch(typeof(Pawn).GetMethod("ButcherProducts"), null, new HarmonyMethod(typeof(HarmonyPatches).GetMethod("ButcherProducts_PostFix")));
-            harmony.Patch(typeof(Pawn_RecordsTracker).GetMethod("Increment"), null, new HarmonyMethod(typeof(HarmonyPatches).GetMethod("Increment_PostFix")), null);
+            harmony.Patch(typeof(Pawn).GetMethod("Kill"), null, new HarmonyMethod(typeof(HarmonyPatches), nameof(Kill)));
+            
+//            harmony.Patch(typeof(Pawn_RecordsTracker).GetMethod("Increment"), null, new HarmonyMethod(typeof(HarmonyPatches).GetMethod("Increment_PostFix")), null);
         }
 
-        public static void Increment_PostFix(Pawn_RecordsTracker __instance, RecordDef def)
+//        public static void Increment_PostFix(Pawn_RecordsTracker __instance, RecordDef def)
+//        {
+//            if (Find.World.GetComponent<WorldComponent_Uvhash>() is WorldComponent_Uvhash uvhashComp &&
+//                !uvhashComp.spawnedCrystal &&
+//                def == RecordDefOf.CellsMined)
+//            {
+//                uvhashComp.DecrementCellsUntilCrystalCount((Pawn)AccessTools.Field(typeof(Pawn_RecordsTracker), "pawn").GetValue(__instance));
+//            }
+//        }
+
+        public static void Kill(Pawn __instance, DamageInfo? dinfo, Hediff exactCulprit = null)
         {
-            if (Find.World.GetComponent<WorldComponent_Uvhash>() is WorldComponent_Uvhash uvhashComp &&
-                !uvhashComp.spawnedCrystal &&
-                def == RecordDefOf.CellsMined)
+            if (__instance?.RaceProps?.Humanlike ?? false)
             {
-                uvhashComp.DecrementCellsUntilCrystalCount((Pawn)AccessTools.Field(typeof(Pawn_RecordsTracker), "pawn").GetValue(__instance));
+                var uvhashComp = Find.World.GetComponent<WorldComponent_Uvhash>();
+                if (uvhashComp != null)
+                {
+                    uvhashComp.Notify_Death();
+                }   
             }
         }
 

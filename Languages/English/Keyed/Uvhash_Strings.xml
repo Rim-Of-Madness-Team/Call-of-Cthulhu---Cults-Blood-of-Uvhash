@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 
-   
+   <BloodCrystalBond>Blood Bonded</BloodCrystalBond>
+   <BloodCrystalBondDesc>After thoroughly researching the blood crystal, {0} came to strange and bizarre conclusions. The crystal is not a known composition of earthly material in any way, shape, or form. Touching it yields a flesh-like surface and a pulse like a beating heart, yet its natural shape implies it is a cold motionless crystal.\n\nThe only way to test its properties beyond this was to feed it. {0} gave the crystal many different types of blood, but the best results came from humanoid stock. As curiosity eventually seeped through the cracks of HIS mind, HE could not help but give the crystal HIS blood. As HE gave HIS essence to the crystal, it began to communicate. When the whispers came, so too came the mark on {0}'s body. A bloody new birthmark.\n\n{0} has become blood bonded to the crystal.</BloodCrystalBondDesc>
 
-	<!-- Uvhash B18 -->
+   <CometPassingLabel>Comet Perihelion</CometPassingLabel>
+   <CometPassingDesc>The crimson comet cut the sky. Dragging along a seam of red light, emitting an eerily alien rubescence. Beholding it created some unease among colonists, and a few mentioned that the thickened streams tailing the object looked like something most unexpected. They looked like blood.</CometPassingDesc>
+
+   <CometInSkylineLabel>Comet Heralding</CometInSkylineLabel>
+   <CometInSkylineDesc>After a noticeable flash of crimson in the sky, a newly visible spec in the skyline has created some concern. Under normal circumstances, comets do not have a particular color other than blue or green considering their natural compositions. Clear visibility of this comet will be in a few days. A red comet is coming.</CometInSkylineDesc>
+
   <UvhashCommunicationEventLabel>The Blood Mad God of the Void</UvhashCommunicationEventLabel>
   <UvhashCommunicationEventDesc>The blood crystal floated motionless above the surface of its pool. The humming began again, although this time far more humanoid. To those that witnessed it, it seemed as if it had duplicated the very vocal coords of its last victim.\n\nTo the surprise of all, it pulled forth a crimson mist from the blood containers. As the blood struck the crystal, it soaked itself in the liquid. Excess liquid began to drip into the pool below. This time, however, the crystal did not collapse. It stayed afloat, as if suspended tightly by unseen strands like how a spider maintains its web.
   </UvhashCommunicationEventDesc>
-	
-	<!-- Uvhash A17 -->
 
   <BloodCrystalEventLabel>Blood Crystal Discovered</BloodCrystalEventLabel>
-	<BloodCrystalEventDesc>After picking away a cluster of hardened stone, {0} unearthed a strange crystal protruding from the crumbling layers. Its magnificent luminescence seemed to call to {0}. As they touched its surface, {0} accidentally cut themselves on the unexpectedly sharp edges.\n\nTo their horror, the crystal pulled itself from the earth and levitated before them. It bobbed and gravitated towards them slowly, a strange low hum breaking the silence. Utilizing some unknown possibly magnetic force, the crystal drew more blood from {0}'s wound. It seeped into the air, the red, thick substance transformed into a mist, spreading over the crystal and into it. It ceased when {0} had hidden their cut. The humming stopped, and the crystal fell to the ground.\n\nThough shaken by the traumatic encounter, some believe it could serve the colony well if one were to study the anomalous entity closely and with careful observation.</BloodCrystalEventDesc>
+	<BloodCrystalEventDesc>After the crimson comet passed overhead, {0} unearthed a strange crystal protruding from a nearby crater. Its magnificent luminescence seemed to call to {0}. As HE touched its surface, {0} accidentally cut HIMself on the unexpectedly sharp edges.\n\nTo HIS horror, the crystal pulled itself from the earth and levitated before them. It bobbed and gravitated towards them slowly, a strange low hum breaking the silence. Utilizing some unknown possibly magnetic force, the crystal drew more blood from {0}'s wound. It seeped into the air, the red, thick substance transformed into a mist, spreading over the crystal and into it. It ceased when {0} had hidden HIS cut. The humming stopped, and the crystal fell to the ground.\n\nThough shaken by the traumatic encounter, some believe it could serve the colony well if one were to study the anomalous entity closely and with careful observation.</BloodCrystalEventDesc>
   <BloodCommandBuildCastingAltar>Build Casting Altar</BloodCommandBuildCastingAltar>
 	<BloodCommandBuildCastingAltarDesc>Constructs a casting altar to utilize powerful blood magic.</BloodCommandBuildCastingAltarDesc>
 	<BloodTankStored>Stored</BloodTankStored>
