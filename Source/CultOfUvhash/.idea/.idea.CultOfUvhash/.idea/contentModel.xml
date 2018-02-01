@@ -5,18 +5,23 @@
     <e p="D:\SteamLibrary\steamapps\common\RimWorld\ModsWorkspace\Call-of-Cthulhu---Cults---Blood-of-Uvhash\Assemblies" t="ExcludeRecursive" />
     <e p="D:\SteamLibrary\steamapps\common\RimWorld\ModsWorkspace\Call-of-Cthulhu---Cults---Blood-of-Uvhash\Source\CultOfUvhash" t="IncludeFlat">
       <e p="CultOfUvhash" t="IncludeRecursive">
+        <e p="BloodCrystal.cs" t="Include" />
         <e p="Building_BloodCollector.cs" t="Include" />
         <e p="Building_BloodFactory.cs" t="Include" />
         <e p="Building_BloodHub.cs" t="Include" />
         <e p="Building_BloodRune.cs" t="Include" />
         <e p="Building_CastingAltar.cs" t="Include" />
         <e p="Building_SkullThrone.cs" t="Include" />
+        <e p="CompBloodMage.cs" t="Include" />
         <e p="CompBloodTank.cs" t="Include" />
         <e p="CompProperties_BloodTank.cs" t="Include" />
         <e p="CthulhuUtility.cs" t="Include" />
         <e p="CultOfUvhash.csproj" t="IncludeRecursive" />
         <e p="HarmonyPatches.cs" t="Include" />
+        <e p="IncidentWorker_BloodCrystalFragmentImpact.cs" t="Include" />
         <e p="JobDriver_BloodHaulPrisoner.cs" t="Include" />
+        <e p="JobDriver_DestroyBloodCrystal.cs" t="Include" />
+        <e p="JobDriver_InvestigateBloodCrystal.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
         <e p="PlaceWorker_NextToBloodCollectorAccepter.cs" t="Include" />
         <e p="Projectile_BloodMist.cs" t="Include" />
@@ -25,6 +30,7 @@
         </e>
         <e p="ThingWithComps_Necronomicon.cs" t="Include" />
         <e p="UvhashDefOf.cs" t="Include" />
+        <e p="WeatherEvent_BloodCometFlash.cs" t="Include" />
         <e p="WorldComponent_Uvhash.cs" t="Include" />
       </e>
       <e p="CultOfUvhash.sln" t="IncludeFlat" />

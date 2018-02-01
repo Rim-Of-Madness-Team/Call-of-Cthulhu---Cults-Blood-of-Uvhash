@@ -19,20 +19,20 @@ namespace CultOfUvhash
             HarmonyInstance harmony = HarmonyInstance.Create("rimworld.jecrell.uvhash");
             harmony.Patch(typeof(Pawn).GetMethod("ButcherProducts"), null, new HarmonyMethod(typeof(HarmonyPatches).GetMethod("ButcherProducts_PostFix")));
             harmony.Patch(typeof(Pawn).GetMethod("Kill"), null, new HarmonyMethod(typeof(HarmonyPatches), nameof(Kill)));
-            
-//            harmony.Patch(typeof(Pawn_RecordsTracker).GetMethod("Increment"), null, new HarmonyMethod(typeof(HarmonyPatches).GetMethod("Increment_PostFix")), null);
+            //harmony.Patch(typeof(Pawn_RecordsTracker).GetMethod("Increment"), null, new HarmonyMethod(typeof(HarmonyPatches).GetMethod("Increment_PostFix")), null);
+            harmony.Patch(typeof(Mineable).GetMethod("DestroyMined"), null, new HarmonyMethod(typeof(HarmonyPatches).GetMethod("DestroyMined")), null);
         }
 
-//        public static void Increment_PostFix(Pawn_RecordsTracker __instance, RecordDef def)
-//        {
-//            if (Find.World.GetComponent<WorldComponent_Uvhash>() is WorldComponent_Uvhash uvhashComp &&
-//                !uvhashComp.spawnedCrystal &&
-//                def == RecordDefOf.CellsMined)
-//            {
-//                uvhashComp.DecrementCellsUntilCrystalCount((Pawn)AccessTools.Field(typeof(Pawn_RecordsTracker), "pawn").GetValue(__instance));
-//            }
-//        }
-
+        //Mineable
+        public static void DestroyMined(Mineable __instance, Pawn pawn)
+        {
+            if (Find.World.GetComponent<WorldComponent_Uvhash>() is WorldComponent_Uvhash uvhashComp &&
+                !uvhashComp.SpawnedCrystal && __instance.def == UvhashDefOf.Uvhash_Bloodstone)
+            {
+                uvhashComp.DecrementCellsUntilCrystalCount(pawn);
+            }
+        }
+        
         public static void Kill(Pawn __instance, DamageInfo? dinfo, Hediff exactCulprit = null)
         {
             if (__instance?.RaceProps?.Humanlike ?? false)

@@ -3,7 +3,7 @@
 
 <ThingDef Name="Uvhash_BloodCrystal">
 <defName>Uvhash_BloodCrystal</defName>
-  <thingClass>ThingWithComps</thingClass>
+  <thingClass>CultOfUvhash.BloodCrystal</thingClass>
 <label>blood crystal</label>
 <description>Discovered during mining operations, this impossible crystal collects and pulls blood from incredible distances.</description>
   <graphicData>

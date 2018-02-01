@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<IncidentDef>
+		<defName>Uvhash_BloodCometFragmentCrater</defName>
+		<label>blood comet fragment impact</label>
+		<category>Misc</category>
+		<targetTypes>
+			<li>MapPlayerHome</li>
+		</targetTypes>
+		<workerClass>CultOfUvhash.IncidentWorker_BloodCrystalFragmentImpact</workerClass>
+		<baseChance>0</baseChance>
+		<letterLabel>blood comet fragment impact</letterLabel>
+		<letterText>A fragment of the blood comet has struck ground in the area. It has left behind a lump of {0} that may be worth investigating.</letterText>
+    <tale>MeteoriteImpact</tale>
+	</IncidentDef>
+	
+  <ThingDef ParentName="Uvhash_SkyfallerBase">
+    <defName>Uvhash_BloodCometFragmentIncoming</defName>
+    <label>blood comet fragment (incoming)</label>
+    <size>(2, 2)</size>
+    <graphicData>
+      <texPath>Skyfaller/Uvhash_BloodCometFragment</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>(11, 11)</drawSize>
+    </graphicData>
+    <skyfaller>
+      <shadowSize>(3, 3)</shadowSize>
+      <explosionRadius>4</explosionRadius>
+      <explosionDamage>Bomb</explosionDamage>
+      <rotateGraphicTowardsDirection>true</rotateGraphicTowardsDirection>
+      <speed>1.2</speed>
+    </skyfaller>
+  </ThingDef>
+  
+  <ThingDef Name="Uvhash_SkyfallerBase" Abstract="True">
+    <category>Skyfaller</category>
+    <thingClass>Skyfaller</thingClass>
+    <useHitPoints>false</useHitPoints>
+    <drawOffscreen>true</drawOffscreen>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Skyfaller</altitudeLayer>
+    <drawerType>RealtimeOnly</drawerType>
+    <skyfaller />
+  </ThingDef>  
+
+</Defs>

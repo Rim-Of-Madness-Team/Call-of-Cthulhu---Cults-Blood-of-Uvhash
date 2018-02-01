@@ -35,6 +35,9 @@
       <HintPath>..\..\..\..\..\Harmony1091\0Harmony.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="AbilityUser, Version=1.18.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\..\..\JecsTools\Assemblies\AbilityUser.dll</HintPath>
+    </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\..\..\RimWorldWin_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
@@ -51,16 +54,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BloodCrystal.cs" />
     <Compile Include="Building_BloodCollector.cs" />
     <Compile Include="Building_BloodHub.cs" />
     <Compile Include="Building_BloodFactory.cs" />
     <Compile Include="Building_BloodRune.cs" />
     <Compile Include="Building_CastingAltar.cs" />
     <Compile Include="Building_SkullThrone.cs" />
+    <Compile Include="CompBloodMage.cs" />
+    <Compile Include="JobDriver_DestroyBloodCrystal.cs" />
+    <Compile Include="JobDriver_InvestigateBloodCrystal.cs" />
+    <Compile Include="WeatherEvent_BloodCometFlash.cs" />
     <Compile Include="CompBloodTank.cs" />
     <Compile Include="CompProperties_BloodTank.cs" />
     <Compile Include="CthulhuUtility.cs" />
     <Compile Include="HarmonyPatches.cs" />
+    <Compile Include="IncidentWorker_BloodCrystalFragmentImpact.cs" />
     <Compile Include="JobDriver_BloodHaulPrisoner.cs" />
     <Compile Include="PlaceWorker_NextToBloodCollectorAccepter.cs" />
     <Compile Include="Projectile_BloodMist.cs" />

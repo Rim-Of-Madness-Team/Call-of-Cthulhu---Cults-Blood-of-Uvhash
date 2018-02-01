@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  	<ThingDef ParentName="Uvhash_UglyRockBase">
+    <defName>Uvhash_Bloodstone</defName>
+    <label>blood stone</label>
+    <description>An alien mineral that seems to have an organic interior. This living rock is simply called blood stone.</description>
+    <graphicData>
+      <color>(173,10,10)</color>
+    </graphicData>
+    <statBases>
+	  <MarketValue>300</MarketValue>
+      <Flammability>0.51</Flammability>
+      <Beauty>-2</Beauty>
+      <MaxHitPoints>500</MaxHitPoints>
+    </statBases>
+    <building>
+      <mineableThing>Uvhash_ChunkBloodstone</mineableThing>
+      <mineableDropChance>0.25</mineableDropChance>
+    </building>
+  </ThingDef>
+  
+  <ThingDef ParentName="Uvhash_ChunkRockBase">
+    <defName>Uvhash_ChunkBloodstone</defName>
+    <label>blood stone chunk</label>
+    <graphicData>
+      <color>(173,10,10)</color>
+    </graphicData>
+    <statBases>
+      <Mass>18</Mass>
+    </statBases>
+    <soundDrop>ChunkRock_Drop</soundDrop>
+    <butcherProducts>
+      <BlocksSlate>20</BlocksSlate>
+    </butcherProducts>
+  </ThingDef>
+  
+  <ThingDef ParentName="Uvhash_StoneBlocksBase">
+    <defName>Uvhash_BlocksBloodstone</defName>
+    <label>blood stone blocks</label>
+    <description>Blocks of solid blood stone. This living stone seems to have mended its wounds when placed back together after the stonecutting process.</description>
+    <graphicData>
+      <color>(173,10,10)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>5</MarketValue>
+      <Mass>0.9</Mass>
+    </statBases>
+    <stuffProps>
+	  <commonality>0.01</commonality>
+      <color>(173,10,10)</color>
+      <soundImpactStuff>BulletImpactGround</soundImpactStuff>
+      <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
+      <stuffAdjective>blood stone</stuffAdjective>
+      <statFactors>
+        <Beauty>1.1</Beauty>
+        <MarketValue>5</MarketValue>
+        <MaxHitPoints>1.3</MaxHitPoints>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+  
+  <!-- Bases -->
+  
+    <ThingDef Name="Uvhash_UglyRockBase" ParentName="Uvhash_RockBase" Abstract="True" >
+    <statBases>
+	  <MarketValue>300</MarketValue>
+      <Flammability>0.51</Flammability>
+      <Beauty>-2</Beauty>
+    </statBases>
+		<building>
+			<mineableYieldWasteable>false</mineableYieldWasteable>
+		</building>
+  </ThingDef>
+  
+    <ThingDef Name="Uvhash_RockBase" ParentName="Uvhash_BuildingNaturalBase" Abstract="True" >
+    <thingClass>Mineable</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Linked/Rock_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <linkType>CornerFiller</linkType>
+      <linkFlags>
+        <li>Rock</li>
+        <li>MapEdge</li>
+      </linkFlags>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <blockWind>true</blockWind>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>1</fillPercent>
+    <coversFloor>true</coversFloor>
+    <neverMultiSelect>true</neverMultiSelect>
+    <rotatable>false</rotatable>
+    <saveCompressible>true</saveCompressible>
+    <holdsRoof>true</holdsRoof>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <blockLight>true</blockLight>
+    <mineable>true</mineable>
+    <statBases>
+	  <MarketValue>300</MarketValue>
+      <Flammability>0.51</Flammability>
+    </statBases>
+    <building>
+      <isInert>true</isInert>
+      <isNaturalRock>true</isNaturalRock>
+	  <isResourceRock>true</isResourceRock>
+      <canBuildNonEdificesUnder>false</canBuildNonEdificesUnder>
+      <deconstructible>false</deconstructible>
+    </building>
+  </ThingDef>
+  
+
+  <ThingDef Name="Uvhash_BuildingNaturalBase" Abstract="True">
+    <category>Building</category>
+    <selectable>true</selectable>
+    <drawerType>MapMeshOnly</drawerType>
+    <filthLeaving>RockRubble</filthLeaving>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+	</ThingDef>
+
+	
+  <ThingDef Name="Uvhash_ChunkBase" Abstract="True">
+    <category>Item</category>
+    <thingClass>Thing</thingClass>
+    <altitudeLayer>Item</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.50</fillPercent>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <Beauty>-8</Beauty>
+      <Cleanliness>-2</Cleanliness>
+    </statBases>
+    <selectable>true</selectable>
+    <pathCost>55</pathCost>
+    <pathCostIgnoreRepeat>true</pathCostIgnoreRepeat>
+    <drawerType>MapMeshOnly</drawerType>
+    <randomizeRotationOnSpawn>true</randomizeRotationOnSpawn>
+    <designateHaulable>true</designateHaulable>
+    <saveCompressible>true</saveCompressible>
+    <stackLimit>1</stackLimit>
+    <tradeability>Never</tradeability>
+  </ThingDef>
+
+  <ThingDef ParentName="Uvhash_ChunkBase" Name="Uvhash_ChunkRockBase" Abstract="True">
+    <description>A chunk of rock. It's possible to cut usable stone blocks from it.</description>
+    <graphicData>
+      <texPath>Things/Item/Chunk/ChunkStone</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <flipExtraRotation>80</flipExtraRotation>
+    </graphicData>
+    <thingCategories>
+      <li>StoneChunks</li>
+    </thingCategories>
+  </ThingDef>
+
+  
+  <ThingDef ParentName="Uvhash_ResourceBase" Name="Uvhash_StoneBlocksBase" Abstract="True">
+    <description>Blocks of stone. Mostly useful for building long-lasting, simple structures.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/StoneBlocks</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Stone_Drop</soundInteract>
+    <soundDrop>Stone_Drop</soundDrop>
+    <useHitPoints>false</useHitPoints>
+    <statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+      <MarketValue>200</MarketValue>
+      <SharpDamageMultiplier>0.6</SharpDamageMultiplier>
+      <BluntDamageMultiplier>1.0</BluntDamageMultiplier>
+			<Beauty>-12</Beauty>
+		</statBases>
+    <thingCategories>
+      <li>StoneBlocks</li>
+    </thingCategories>
+    <stuffProps>
+      <categories>
+        <li>Stony</li>
+      </categories>
+      <commonality>0.20</commonality> <!-- because there are so many stone types -->
+      <appearance>Bricks</appearance>
+      <statOffsets>
+        <WorkToBuild>140</WorkToBuild>
+      </statOffsets>
+      <statFactors>
+        <MarketValue>0.4</MarketValue>
+        <MaxHitPoints>2.4</MaxHitPoints>
+        <Flammability>0</Flammability>
+        <WorkToBuild>6.0</WorkToBuild>
+				<WorkToMake>1.3</WorkToMake>
+        <DoorOpenSpeed>0.45</DoorOpenSpeed>
+        <BedRestEffectiveness>0.9</BedRestEffectiveness>
+        <MeleeWeapon_CooldownMultiplier>1.35</MeleeWeapon_CooldownMultiplier>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+  
+   
+  <ThingDef Name="Uvhash_ResourceBase" Abstract="True">
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <useHitPoints>true</useHitPoints>
+    <selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+    <stackLimit>75</stackLimit>
+		<statBases>
+			<Beauty>-4</Beauty>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<alwaysHaulable>true</alwaysHaulable>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<rotatable>false</rotatable>
+		<pathCost>15</pathCost>
+	</ThingDef>
+
+</Defs>

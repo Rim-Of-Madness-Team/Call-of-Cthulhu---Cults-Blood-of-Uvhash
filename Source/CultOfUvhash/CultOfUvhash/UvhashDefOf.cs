@@ -23,6 +23,10 @@ namespace CultOfUvhash
         public static ResearchProjectDef Forbidden_BloodMagicSummoningI;
         public static ResearchProjectDef Forbidden_BloodMagicSummoningII;
         public static ResearchProjectDef Forbidden_BloodMagicSummoningIII;
-
+        public static ThingDef Uvhash_BloodCometFragmentIncoming;
+        public static ThingDef Uvhash_Bloodstone;
+        public static IncidentDef Uvhash_BloodCometFragmentCrater;
+        public static JobDef Uvhash_InvestigateCrystal;
+        public static JobDef Uvhash_DestroyCrystal;
     }
 }

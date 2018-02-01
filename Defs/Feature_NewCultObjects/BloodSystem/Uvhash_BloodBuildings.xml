@@ -162,8 +162,16 @@
     <researchPrerequisites><li>Forbidden_Studies</li></researchPrerequisites>
   </ThingDef>
 
+    <ThingDef Name="Uvhash_FurnitureBase" ParentName="BloodBuildingBase" Abstract="True">
+    <designationCategory>Furniture</designationCategory>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <tradeTags>
+      <li>Furniture</li>
+    </tradeTags>
+  </ThingDef>
+  
   <!-- Table base -->
-  <ThingDef Abstract="True" ParentName="FurnitureBase" Name="TableBase">
+  <ThingDef Abstract="True" ParentName="Uvhash_FurnitureBase" Name="Uvhash_TableBase">
     <thingClass>Building</thingClass>
     <altitudeLayer>Building</altitudeLayer>
     <description>People eat off tables when chairs are placed facing them.</description>
@@ -192,7 +200,7 @@
   </ThingDef>
 
 
-  <ThingDef ParentName="TableBase">
+  <ThingDef ParentName="Uvhash_TableBase">
     <defName>Uvhash_CastingAltar</defName>
     <label>casting altar</label>
     <thingClass>CultOfUvhash.Building_CastingAltar</thingClass>
