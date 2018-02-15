@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 
+
+   <BloodMage_CastingOn>Casting on {0}.</BloodMage_CastingOn>
+
+   <BloodBookCreatedDesc>HECAP drips with blood. A flesh-bound book from the remains of a fresh kill falls from HIS hands. HECAP speaks to the others of seeing impossible landscapes paved in bloodstone where the air smells of copper. HECAP recalls in HIS visions the three keys to the doors of power.\n\n-an altar for the book\n-a nexus for the crystal\n-...blood\n\nIn the vision, when all the doors were opened, HE witnessed unfathomable power.\n\nThe others would have told HIM that HE had gone mad, if they hadn't just witnessed HIM call a bolt of lightning from the sky. Most colonists on the surface urge for the destruction of the book and the crystal. A few, however, are tempted to realize the completed vision, so they may dare witness what awe-striking power lays in wait.</BloodBookCreated>
+   <BloodBookCreation_Message>{0} begins creating something from {1}'s remains.</BloodBookCreation_Message>
+
+   <BloodMageHediff_HearsWhispers>Hears whispers</BloodMageHediff_HearsWhispers>      
+   <BloodMageHediff_Bonded>Blood bonded</BloodMageHediff_Bonded>   
+   <BloodMageHediff_God>Blood Mad God of the Void</BloodMageHediff_God>
+   <BloodMageHediff_Master>Blood mage (master)</BloodMageHediff_Master>
+   <BloodMageHediff_Apprentice>Blood mage (apprentice)</BloodMageHediff_Apprentice>
+
    <BloodCrystal_Investigate>Investigate (hazardous)</BloodCrystal_Investigate>
    <BloodCrystal_Destroy>Destroy</BloodCrystal_Destroy>
 
    <BloodCrystalBond>Blood Bonded</BloodCrystalBond>
-   <BloodCrystalBondDesc>After thoroughly researching the blood crystal, {0} came to strange and bizarre conclusions. The crystal is not a known composition of earthly material in any way, shape, or form. Touching it yields a flesh-like surface and a pulse like a beating heart, yet its natural shape implies it is a cold motionless crystal.\n\nThe only way to test its properties beyond this was to feed it. {0} gave the crystal many different types of blood, but the best results came from humanoid stock. As curiosity eventually seeped through the cracks of HIS mind, HE could not help but give the crystal HIS blood. As HE gave HIS essence to the crystal, it began to communicate. When the whispers came, so too came the mark on {0}'s body. A bloody new birthmark.\n\n{0} has become blood bonded to the crystal.</BloodCrystalBondDesc>
+   <BloodCrystalBondDesc>After thoroughly researching the blood crystal, {0} came to strange and bizarre conclusions. The crystal is not a known composition of earthly material in any way, shape, or form. Touching it yields a flesh-like surface and a pulse like a beating heart, yet its natural shape implies it is a cold motionless crystal.\n\nThe only way to test its properties beyond this was to feed it. {0} gave the crystal many different types of blood, but the best results came from humanoid stock. As curiosity eventually seeped through the cracks of HIS mind, HE could not help but give the crystal HIS blood. As HE gave HIS essence to the crystal, it began to communicate. When the whispers came, so too came the mark on {0}'s body.\n\n{0} has become blood bonded to the crystal.</BloodCrystalBondDesc>
 
    <CometPassingLabel>Comet Perihelion</CometPassingLabel>
-   <CometPassingDesc>The crimson comet cut the sky. Dragging along a seam of red light, emitting an eerily alien rubescence. Beholding it created some unease among colonists, and a few mentioned that the thickened streams tailing the object looked like something most unexpected. They looked like blood.</CometPassingDesc>
+   <CometPassingDesc>The crimson comet cut the sky. Dragging along a seam of red light, emitting an eerily alien rubescence. Beholding it created some unease among colonists, and a few mentioned that the thickened streams tailing the object looked like something most unexpected.\n\nThey looked like blood.</CometPassingDesc>
 
    <CometInSkylineLabel>Comet Heralding</CometInSkylineLabel>
-   <CometInSkylineDesc>After a noticeable flash of crimson in the sky, a newly visible spec in the skyline has created some concern. Under normal circumstances, comets do not have a particular color other than blue or green considering their natural compositions. Clear visibility of this comet will be in a few days. A red comet is coming.</CometInSkylineDesc>
+   <CometInSkylineDesc>After a noticeable flash of crimson in the sky, a newly visible spec in the skyline has created some concern. Under normal circumstances, comets do not have a particular color other than blue or green considering their natural compositions. Clear visibility of this comet will be in a few days.\n\nA red comet is coming.</CometInSkylineDesc>
 
   <UvhashCommunicationEventLabel>The Blood Mad God of the Void</UvhashCommunicationEventLabel>
   <UvhashCommunicationEventDesc>The blood crystal floated motionless above the surface of its pool. The humming began again, although this time far more humanoid. To those that witnessed it, it seemed as if it had duplicated the very vocal coords of its last victim.\n\nTo the surprise of all, it pulled forth a crimson mist from the blood containers. As the blood struck the crystal, it soaked itself in the liquid. Excess liquid began to drip into the pool below. This time, however, the crystal did not collapse. It stayed afloat, as if suspended tightly by unseen strands like how a spider maintains its web.

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--=============== Interface feedback ==============-->
+
+  <ThingDef ParentName="MoteBase">
+    <defName>Uvhash_MoteBloodMagicCasting</defName>
+    <altitudeLayer>Projectile</altitudeLayer>
+	<thingClass>CultOfUvhash.MoteProlonged</thingClass>
+    <mote>
+      <realTime>true</realTime>
+      <solidTime>16</solidTime>
+      <fadeOutTime>1</fadeOutTime>
+    </mote>
+    <graphicData>
+      <texPath>Mote/BloodMagicCasting</texPath>
+    </graphicData>
+  </ThingDef>
+ 
+
+</Defs>

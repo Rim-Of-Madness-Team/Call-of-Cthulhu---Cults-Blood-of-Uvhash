@@ -19,8 +19,19 @@ namespace CultOfUvhash
             HarmonyInstance harmony = HarmonyInstance.Create("rimworld.jecrell.uvhash");
             harmony.Patch(typeof(Pawn).GetMethod("ButcherProducts"), null, new HarmonyMethod(typeof(HarmonyPatches).GetMethod("ButcherProducts_PostFix")));
             harmony.Patch(typeof(Pawn).GetMethod("Kill"), null, new HarmonyMethod(typeof(HarmonyPatches), nameof(Kill)));
+            harmony.Patch(typeof(Designator_Build).GetMethod("get_Visible"), null, new HarmonyMethod(typeof(HarmonyPatches), nameof(HideBloodCultsThings)));
             //harmony.Patch(typeof(Pawn_RecordsTracker).GetMethod("Increment"), null, new HarmonyMethod(typeof(HarmonyPatches).GetMethod("Increment_PostFix")), null);
             harmony.Patch(typeof(Mineable).GetMethod("DestroyMined"), null, new HarmonyMethod(typeof(HarmonyPatches).GetMethod("DestroyMined")), null);
+        }
+        
+        // RimWorld.Designator_Build
+        public static void HideBloodCultsThings(Designator_Build __instance, ref bool __result)
+        {
+            var entDef = Traverse.Create(__instance).Field("entDef").GetValue<BuildableDef>();
+            if (entDef is ThingDef d && d == UvhashDefOf.Uvhash_CastingAltar)
+            {
+                __result = Find.World.GetComponent<WorldComponent_Uvhash>().CurrentCrystalStage >= CrystalStage.BookCreated;
+            }
         }
 
         //Mineable

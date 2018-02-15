@@ -18,18 +18,24 @@
         <e p="CthulhuUtility.cs" t="Include" />
         <e p="CultOfUvhash.csproj" t="IncludeRecursive" />
         <e p="HarmonyPatches.cs" t="Include" />
+        <e p="HediffWithComps_BloodTattoo.cs" t="Include" />
+        <e p="HediffWithComps_BloodTattoo_Impaler.cs" t="Include" />
         <e p="IncidentWorker_BloodCrystalFragmentImpact.cs" t="Include" />
         <e p="JobDriver_BloodHaulPrisoner.cs" t="Include" />
-        <e p="JobDriver_DestroyBloodCrystal.cs" t="Include" />
+        <e p="JobDriver_CreateBook.cs" t="Include" />
+        <e p="JobDriver_DestroyCrystal.cs" t="Include" />
         <e p="JobDriver_InvestigateBloodCrystal.cs" t="Include" />
+        <e p="JobGiver_MakeTheBook.cs" t="Include" />
+        <e p="MoteProlonged.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
         <e p="PlaceWorker_NextToBloodCollectorAccepter.cs" t="Include" />
         <e p="Projectile_BloodMist.cs" t="Include" />
         <e p="Properties" t="Include">
           <e p="AssemblyInfo.cs" t="Include" />
         </e>
-        <e p="ThingWithComps_Necronomicon.cs" t="Include" />
+        <e p="ThingWithComps_LiberCruoris.cs" t="Include" />
         <e p="UvhashDefOf.cs" t="Include" />
+        <e p="UvhashUtility.cs" t="Include" />
         <e p="WeatherEvent_BloodCometFlash.cs" t="Include" />
         <e p="WorldComponent_Uvhash.cs" t="Include" />
       </e>

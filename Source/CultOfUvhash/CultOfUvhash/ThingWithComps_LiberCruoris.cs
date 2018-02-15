@@ -8,7 +8,7 @@ using Verse.Sound;
 
 namespace CultOfUvhash
 {
-    class ThingWithComps_Necronomicon : ThingWithComps
+    public class ThingWithComps_LiberCruoris : ThingWithComps
     {
         public override IEnumerable<Gizmo> GetGizmos()
         {
@@ -27,30 +27,33 @@ namespace CultOfUvhash
             {
                 yield break;
             }
-            Command_Action command_Action = new Command_Action();
-            command_Action.action = delegate
+            var commandAction = new Command_Action
             {
-                SoundDefOf.SelectDesignator.PlayOneShotOnCamera();
-                //des.SetStuffDef(stuff);
-                des.ProcessInput(new UnityEngine.Event());
-                Find.DesignatorManager.Select(des);
+            
+                action = delegate
+                {
+                    SoundDefOf.SelectDesignator.PlayOneShotOnCamera();
+                    //des.SetStuffDef(stuff);
+                    des.ProcessInput(new UnityEngine.Event());
+                    Find.DesignatorManager.Select(des);
+                },
+                defaultLabel = "BloodCommandBuildCastingAltar".Translate(),
+                defaultDesc = "BloodCommandBuildCastingAltarDesc".Translate(),
+                icon = des.icon,
+                iconProportions = des.iconProportions,
+                iconDrawScale = des.iconDrawScale,
+                iconTexCoords = des.iconTexCoords
             };
-            command_Action.defaultLabel = "BloodCommandBuildCastingAltar".Translate();
-            command_Action.defaultDesc = "BloodCommandBuildCastingAltarDesc".Translate();
-            command_Action.icon = des.icon;
-            command_Action.iconProportions = des.iconProportions;
-            command_Action.iconDrawScale = des.iconDrawScale;
-            command_Action.iconTexCoords = des.iconTexCoords;
             if (stuff != null)
             {
-                command_Action.defaultIconColor = stuff.stuffProps.color;
+                commandAction.defaultIconColor = stuff.stuffProps.color;
             }
             else
             {
-                command_Action.defaultIconColor = buildable.IconDrawColor;
+                commandAction.defaultIconColor = buildable.IconDrawColor;
             }
-            command_Action.hotKey = KeyBindingDefOf.Misc11;
-            yield return command_Action;
+            commandAction.hotKey = KeyBindingDefOf.Misc11;
+            yield return commandAction;
             yield break;
         }
 

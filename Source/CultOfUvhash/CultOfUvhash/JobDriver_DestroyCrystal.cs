@@ -23,8 +23,13 @@ using RimWorld.Planet;   // RimWorld specific functions for world creation
 
 namespace CultOfUvhash
 {
-    public class JobDriver_DestroyBloodCrystal : JobDriver
+    public class JobDriver_DestroyCrystal : JobDriver
     {
+        public override RandomSocialMode DesiredSocialMode()
+        {
+            return RandomSocialMode.Off;
+        }
+        
         public override bool TryMakePreToilReservations()
         {
             return true;

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThinkTreeDef>
+    <defName>Uvhash_WillOfUvhash</defName>
+    <insertTag>Humanlike_PostMentalState</insertTag>
+    <insertPriority>49</insertPriority>
+    <thinkRoot Class="ThinkNode_ConditionalMentalState">
+      <state>Uvhash_WillOfUvhash</state>
+      <subNodes>
+        <li Class="ThinkNode_Priority">
+          <subNodes>
+            <li Class="CultOfUvhash.JobGiver_MakeTheBook"/>
+            <li Class="JobGiver_WanderOwnRoom">
+              <maxDanger>Deadly</maxDanger>
+            </li>
+          </subNodes>
+        </li>
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+
+</Defs>

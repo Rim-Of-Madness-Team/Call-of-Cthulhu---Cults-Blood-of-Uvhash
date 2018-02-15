@@ -62,8 +62,14 @@
     <Compile Include="Building_CastingAltar.cs" />
     <Compile Include="Building_SkullThrone.cs" />
     <Compile Include="CompBloodMage.cs" />
-    <Compile Include="JobDriver_DestroyBloodCrystal.cs" />
+    <Compile Include="HediffWithComps_BloodTattoo.cs" />
+    <Compile Include="HediffWithComps_BloodTattoo_Impaler.cs" />
+    <Compile Include="JobDriver_CreateBook.cs" />
+    <Compile Include="JobDriver_DestroyCrystal.cs" />
     <Compile Include="JobDriver_InvestigateBloodCrystal.cs" />
+    <Compile Include="JobGiver_MakeTheBook.cs" />
+    <Compile Include="MoteProlonged.cs" />
+    <Compile Include="UvhashUtility.cs" />
     <Compile Include="WeatherEvent_BloodCometFlash.cs" />
     <Compile Include="CompBloodTank.cs" />
     <Compile Include="CompProperties_BloodTank.cs" />
@@ -74,7 +80,7 @@
     <Compile Include="PlaceWorker_NextToBloodCollectorAccepter.cs" />
     <Compile Include="Projectile_BloodMist.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ThingWithComps_Necronomicon.cs" />
+    <Compile Include="ThingWithComps_LiberCruoris.cs" />
     <Compile Include="UvhashDefOf.cs" />
     <Compile Include="WorldComponent_Uvhash.cs" />
   </ItemGroup>

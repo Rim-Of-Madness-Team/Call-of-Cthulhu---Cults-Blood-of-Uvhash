@@ -5,6 +5,7 @@ using System.Text;
 using Verse;
 using RimWorld;
 using RimWorld.Planet;
+using UnityEngine;
 using Verse.AI;
 using static System.Int32;
 
@@ -182,10 +183,13 @@ namespace CultOfUvhash
             ThingWithComps bloodCrystal = (ThingWithComps) ThingMaker.MakeThing(UvhashDefOf.Uvhash_BloodCrystal, null);
             GenPlace.TryPlaceThing(bloodCrystal, p.PositionHeld, p.Map, ThingPlaceMode.Near);
             spawnedCrystal = true;
-            Find.WindowStack.Add(new Dialog_MessageBox("BloodCrystalEventDesc".Translate(new object[]
+            var dialogDesc = "BloodCrystalEventDesc".Translate(new object[]
             {
                 p.Name.ToStringShort
-            }).AdjustedFor(p), "BloodCrystalEventLabel".Translate()));
+            }).AdjustedFor(p);
+            var dialogButton = "BloodCrystalEventLabel".Translate();
+            UvhashUtility.ShowMessageBox(dialogDesc, dialogButton);
+            
             BodyPartRecord hand = p?.health?.hediffSet?.GetNotMissingParts()
                 .FirstOrDefault(x => x.def == BodyPartDefOf.RightHand || x.def == BodyPartDefOf.LeftHand);
             if (hand == null)
@@ -201,19 +205,24 @@ namespace CultOfUvhash
         }
 
 
+
+
         public void Notify_BloodBond(Pawn p)
         {
-            if (p.TryGetComp<CompBloodMage>() is CompBloodMage bloodMageComp)
+            if (p.TryGetComp<CompBloodMage>() is CompBloodMage bloodMageComp && CurrentCrystalStage != CrystalStage.Investigated)
             {
-                bloodMageComp.IsBloodMage = true;
+                CurrentCrystalStage = CrystalStage.Investigated;
+                bloodMageComp.BloodMageState = BloodMageState.Discovery;
                 CurrentBloodMage = p;
                 Find.WindowStack.Add(new Dialog_MessageBox("BloodCrystalBondDesc".Translate(new object[]
                 {
                     p.Name.ToStringShort
                 }).AdjustedFor(p), "BloodCrystalBond".Translate(p)));
-                CurrentCrystalStage = CrystalStage.Investigated;
+                p.mindState.mentalStateHandler.TryStartMentalState(UvhashDefOf.Uvhash_WillOfUvhash);
+                HealthUtility.AdjustSeverity(p, UvhashDefOf.Uvhash_TattooBloodMage, 1.0f);
             }
         }
+
 
         public void Notify_UvhashCommunicated(Pawn p)
         {
@@ -234,11 +243,13 @@ namespace CultOfUvhash
             base.ExposeData();
             Scribe_References.Look(ref this.currentBloodMage, "currentBloodMage");
             Scribe_References.Look(ref this.currentBloodApprentice, "currentBloodApprentice");
-            Scribe_Values.Look(ref this.spawnedCrystal, "spawnedCrystal", false);
-            Scribe_Values.Look(ref this.deathsRecorded, "deathsRecorded", 0);
-            Scribe_Values.Look(ref this.triggeredUvhash, "triggeredUvhash", false);
-            Scribe_Values.Look(ref this.currentUvhashStage, "currentStage", UvhashStage.None);
-            Scribe_Values.Look(ref this.minedCellsUntilCrystal, "minedCellsUntilCrystal", 0);
+            Scribe_Values.Look(ref this.spawnedCrystal, "spawnedCrystal");
+            Scribe_Values.Look(ref this.deathsRecorded, "deathsRecorded");
+            Scribe_Values.Look(ref this.triggeredUvhash, "triggeredUvhash");
+            Scribe_Values.Look(ref this.currentUvhashStage, "currentStage");
+            Scribe_Values.Look(ref this.currentCometStage, "currentCometStage");
+            Scribe_Values.Look(ref this.currentCrystalStage, "currentCrystalStage");
+            Scribe_Values.Look(ref this.minedCellsUntilCrystal, "minedCellsUntilCrystal");
         }
 
         public void Notify_BloodCrystalDestroyed(Pawn pawn)

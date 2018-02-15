@@ -47,13 +47,13 @@
   </comps>
 </ThingDef>
 
-  <ThingDef Name="Uvhash_NecronomiconI">
-	<defName>Uvhash_NecronomiconI</defName>
-    <thingClass>CultOfUvhash.ThingWithComps_Necronomicon</thingClass>
-	<label>fragmented necronomicon</label>
-	<description>Purportedly authored by the Mad Arab Abdul Alhazred, the necronomicon contains accounts of the old ones and how to summon them. The papers that line this copy are veined with bloody ink and still copper scented. This volume is incomplete, however, a large chapter on thaumaturgy, also known as blood magic, remains in-tact.</description>
+  <ThingDef>
+	<defName>Uvhash_BloodRituals</defName>
+    <thingClass>ThingWithComps</thingClass>
+	<label>Blood Rituals of Rhylkos</label>
+	<description>This is the original nauseating tome of the blood-mad god of the Void known as Uvhash, seemingly plucked from long lost history. The masterful wizard from the times of ancient Rome, Marcus Antistus falsely recorded the destruction of this text in his book the Clavicule Cosmographicum. Inside the book are countless depictions of rituals for creating power from blood through tattoos, runes, and different sorts of viscera. How the text has survived for thousands of years is a complete mystery.</description>
     <graphicData>
-      <texPath>Misc/Necronomicon</texPath>
+      <texPath>Misc/BloodRituals</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
     </graphicData>
@@ -73,6 +73,73 @@
     <costList>
       <WoodLog>1</WoodLog>
     </costList>
+    <!--
+	<recipeMaker>
+      <workSpeedStat>SculptingSpeed</workSpeedStat>
+      <workSkill>Artistic</workSkill>
+      <unfinishedThingDef>UnfinishedWriting</unfinishedThingDef>
+      <soundWorking>Estate_SoundManualTypewriter</soundWorking>
+      <recipeUsers>
+        <li>Estate_TableTypewriter</li>
+      </recipeUsers>
+    </recipeMaker>
+	-->
+    <tradeNeverStack>true</tradeNeverStack>
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>True</alwaysHaulable>
+    <tickerType>Never</tickerType>
+    <techLevel>Industrial</techLevel>
+    <thingCategories>
+      <li>Artifacts</li>
+    </thingCategories>
+    <tradeTags>
+      <li>Artifact</li>
+    </tradeTags>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+    </comps>
+  </ThingDef>
+
+  <ThingDef>
+	<defName>Uvhash_LiberCruoris</defName>
+    <thingClass>CultOfUvhash.ThingWithComps_LiberCruoris</thingClass>
+	<label>Liber Cruoris</label>
+	<description>Flesh-bound and bone-held tome of pages inked in blood. It seethes with malice.</description>
+    <graphicData>
+      <texPath>Misc/LiberCruoris</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <category>Item</category>
+    <pathCost>10</pathCost>
+    <useHitPoints>true</useHitPoints>
+	<selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <statBases>
+      <WorkToMake>2000</WorkToMake>
+      <MarketValue>20</MarketValue>
+      <MaxHitPoints>20</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+      <SellPriceFactor>0.25</SellPriceFactor>
+    </statBases>
+    <costList>
+      <WoodLog>1</WoodLog>
+    </costList>
+    <!--
+	<recipeMaker>
+      <workSpeedStat>SculptingSpeed</workSpeedStat>
+      <workSkill>Artistic</workSkill>
+      <unfinishedThingDef>UnfinishedWriting</unfinishedThingDef>
+      <soundWorking>Estate_SoundManualTypewriter</soundWorking>
+      <recipeUsers>
+        <li>Estate_TableTypewriter</li>
+      </recipeUsers>
+    </recipeMaker>
+	-->
     <tradeNeverStack>true</tradeNeverStack>
     <altitudeLayer>Item</altitudeLayer>
     <alwaysHaulable>True</alwaysHaulable>

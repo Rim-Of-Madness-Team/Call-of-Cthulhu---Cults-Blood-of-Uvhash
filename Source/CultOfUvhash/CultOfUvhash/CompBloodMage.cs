@@ -3,10 +3,18 @@ using Verse;
 
 namespace CultOfUvhash
 {
+    public enum BloodMageState
+    {
+        None,
+        Discovery,
+        Apprentice,
+        Master,
+        God
+    }
+    
     public class CompBloodMage : CompAbilityUser
     {
-        private bool isBloodMage = false;
-        private bool isBloodApprentice;
+        private BloodMageState bloodMageState = BloodMageState.None;
         private int bloodMageLevelCap;
         private int bloodMageLevel;
         private int bloodMageXP;
@@ -61,16 +69,20 @@ namespace CultOfUvhash
 
         public bool IsBloodMage
         {
-            get => isBloodMage;
-            set => isBloodMage = value;
+            get => bloodMageState != BloodMageState.None;
         }
 
-        public override bool TryTransformPawn() => isBloodMage;
+        public BloodMageState BloodMageState
+        {
+            get => bloodMageState;
+            set => bloodMageState = value;
+        }
+
+        public override bool TryTransformPawn() => IsBloodMage;
         public override void PostExposeData()
         {
             base.PostExposeData();
-            Scribe_Values.Look(ref this.isBloodMage, "isBloodMage", false);
-            Scribe_Values.Look(ref this.isBloodApprentice, "isBloodApprentice", false);
+            Scribe_Values.Look(ref this.bloodMageState, "bloodMageState", BloodMageState.None);
             Scribe_Values.Look(ref this.bloodMageLevel, "bloodMageLevel", 0);
             Scribe_Values.Look(ref this.bloodMageLevelCap, "bloodMageLevelCap", 0);
             Scribe_Values.Look(ref this.bloodMageXP, "bloodMageXP", 0);

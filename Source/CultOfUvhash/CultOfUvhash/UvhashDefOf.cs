@@ -10,7 +10,6 @@ namespace CultOfUvhash
     [DefOf]
     public class UvhashDefOf
     {
-        public static ThingDef Uvhash_NecronomiconI;
         public static ThingDef Uvhash_CastingAltar;
         public static ThingDef Uvhash_BloodCrystal;
         public static ResearchProjectDef Forbidden_BloodMagicI;
@@ -28,5 +27,12 @@ namespace CultOfUvhash
         public static IncidentDef Uvhash_BloodCometFragmentCrater;
         public static JobDef Uvhash_InvestigateCrystal;
         public static JobDef Uvhash_DestroyCrystal;
+        public static ThingDef Uvhash_LiberCruoris;
+        public static JobDef Uvhash_CreateBook;
+        public static MentalStateDef Uvhash_WillOfUvhash;
+        public static HediffDef Uvhash_TattooParalysis;
+        public static HediffDef Uvhash_TattooBloodMage;
+        public static ThingDef Uvhash_MoteBloodMagicCasting;
+        public static SoundDef Uvhash_BloodMagicCastingSustainer;
     }
 }

@@ -208,13 +208,13 @@
   	<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
     <costStuffCount>100</costStuffCount>
     <costList>
-	  <Uvhash_NecronomiconI>1</Uvhash_NecronomiconI>
+	  <Uvhash_LiberCruoris>1</Uvhash_LiberCruoris>
     </costList>
     <graphicData>
       <texPath>Building/CastingAltar</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <shaderType>CutoutComplex</shaderType>
-      <drawSize>(1,1)</drawSize>
+      <drawSize>(2.5,2.5)</drawSize>
       <!--
       <damageData>
         <rect>(0.05,0.27,1.9,1.73)</rect>
@@ -232,9 +232,8 @@
       <Flammability>1.0</Flammability>
       <Beauty>1</Beauty>
     </statBases>
-    <size>(1,1)</size>
-    <rotatable>true</rotatable>
-    <researchPrerequisites><li>Forbidden_Studies</li></researchPrerequisites>	
+    <size>(3,2)</size>
+    <rotatable>true</rotatable>	
   </ThingDef>
 
 </Defs>

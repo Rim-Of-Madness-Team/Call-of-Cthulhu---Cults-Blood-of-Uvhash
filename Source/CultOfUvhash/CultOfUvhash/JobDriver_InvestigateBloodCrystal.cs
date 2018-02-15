@@ -25,9 +25,16 @@ namespace CultOfUvhash
 {
     public class JobDriver_InvestigateBloodCrystal : JobDriver
     {
+        public override RandomSocialMode DesiredSocialMode()
+        {
+            return RandomSocialMode.Off;
+        }
+        
         public override bool TryMakePreToilReservations()
         {
-            return true;
+            if (Find.World.GetComponent<WorldComponent_Uvhash>().CurrentBloodMage == null)
+                return true;
+            return false;
         }
 
         private TargetIndex InvestigateeIndex = TargetIndex.A;
@@ -39,9 +46,12 @@ namespace CultOfUvhash
                 return base.job.GetTarget(TargetIndex.A).Thing;
             }
         }
+
+        public int ticksLeft = -1;
         
         protected override IEnumerable<Toil> MakeNewToils()
         {
+            this.FailOn(() => Find.World.GetComponent<WorldComponent_Uvhash>().CurrentBloodMage != null);
             this.EndOnDespawnedOrNull(InvestigateeIndex, JobCondition.Incompletable);
             //this.EndOnDespawnedOrNull(Build, JobCondition.Incompletable);
             yield return Toils_Reserve.Reserve(InvestigateeIndex, this.job.def.joyMaxParticipants);
@@ -55,9 +65,16 @@ namespace CultOfUvhash
                 defaultCompleteMode = ToilCompleteMode.Delay,
                 defaultDuration = this.job.def.joyDuration
             };
-            watchToil.WithProgressBarToilDelay(TargetIndex.A);
+            watchToil.AddPreInitAction(() =>
+            {
+                ticksLeft = this.job.def.joyDuration;
+            });
+            watchToil.WithProgressBar(TargetIndex.A,
+                () => 1f - (float) watchToil.actor.jobs.curDriver.ticksLeftThisToil /
+                      Mathf.Round((float) watchToil.actor.CurJob.def.joyDuration));
             watchToil.AddPreTickAction(() =>
             {
+                ticksLeft--;
                 this.pawn.rotationTracker.FaceCell(this.TargetA.Cell);
                 this.pawn.GainComfortFromCellIfPossible();
             });
@@ -66,6 +83,12 @@ namespace CultOfUvhash
                 Find.World.GetComponent<WorldComponent_Uvhash>().Notify_BloodBond(this.pawn);
             });
             yield return watchToil;
+        }
+
+        public override void ExposeData()
+        {
+            base.ExposeData();
+            Scribe_Values.Look(ref ticksLeft, "ticksLeft");
         }
     }
 }

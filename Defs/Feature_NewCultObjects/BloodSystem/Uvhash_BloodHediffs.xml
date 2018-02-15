@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+  <HediffDef Name="Uvhash_BloodTattooBase" Abstract="True">
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+    <initialSeverity>0.001</initialSeverity>
+  </HediffDef>
+
+  <HediffDef ParentName="Uvhash_BloodTattooBase">
+    <defName>Uvhash_TattooBloodMage</defName>
+    <label>Blood Tattoo: The Mage</label>
+	<description>A thinly opened eye-shape raised in unhealing scarred flesh.\nGrants Blood Mage Powers</description>
+  </HediffDef>
+
+    <HediffDef ParentName="Uvhash_BloodTattooBase">
+    <defName>Uvhash_TattooParalysis</defName>
+    <hediffClass>CultOfUvhash.HediffWithComps_BloodTattoo_Impaler</hediffClass>
+	<label>Blood Tattoo: The Spike</label>
+	<description>A blood red line of unhealing scarred flesh. Prevents a target from moving for duration.</description>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>
+          <min>4000</min>
+          <max>8000</max>
+        </disappearsAfterTicks>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <minSeverity>0.0005</minSeverity>
+        <label/>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <setMax>0.0</setMax>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <setMax>0.0</setMax>
+          </li>
+        </capMods>
+      </li>
+    </stages>	
+  </HediffDef>
+
+
   <HediffDef ParentName="DiseaseBase">
     <defName>Uvhash_BloodLossSickness</defName>
     <label>blood-drained anemia</label>
