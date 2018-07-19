@@ -75,7 +75,7 @@ namespace CultOfUvhash
             yield return Toils_Goto.GotoThing(TargetIndex.B, PathEndMode.Touch);
             Toil waitingTime = new Toil();
             waitingTime.defaultCompleteMode = ToilCompleteMode.Delay;
-            waitingTime.defaultDuration = 1200;
+            waitingTime.defaultDuration = 400;
             waitingTime.WithProgressBarToilDelay(TargetIndex.A, false, -0.5f);
             waitingTime.initAction = delegate
             {

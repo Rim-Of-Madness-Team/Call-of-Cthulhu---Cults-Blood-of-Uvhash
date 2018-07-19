@@ -34,5 +34,7 @@ namespace CultOfUvhash
         public static HediffDef Uvhash_TattooBloodMage;
         public static ThingDef Uvhash_MoteBloodMagicCasting;
         public static SoundDef Uvhash_BloodMagicCastingSustainer;
+        public static ThingDef Uvhash_BloodNexus;
+        public static JobDef BloodHaulPrisoner;
     }
 }

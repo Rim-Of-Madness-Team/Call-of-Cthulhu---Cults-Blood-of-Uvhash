@@ -179,7 +179,8 @@ namespace CultOfUvhash
 				
 				Find.World.GetComponent<WorldComponent_Uvhash>().CurrentCrystalStage = CrystalStage.BookCreated;
 				this.GetActor().MentalState.RecoverFromState();
-				UvhashUtility.ShowMessageBox();
+				this.GetActor().TryGetComp<CompBloodMage>().BloodMageLevel = 1;
+				UvhashUtility.ShowMessageBox("BloodBookCreatedDesc".Translate(this.GetActor()).AdjustedFor(this.GetActor()), "BloodBookCreated".Translate());
 			};
 
 			yield return new Toil

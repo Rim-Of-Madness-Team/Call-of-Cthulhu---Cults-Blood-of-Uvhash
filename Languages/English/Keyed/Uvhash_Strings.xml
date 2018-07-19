@@ -2,9 +2,23 @@
 <LanguageData>
 
 
+   <BloodMage_LevelUp>{0} has leveled up their skills in blood magic.</BloodMage_LevelUp>
+
+   <BloodMage_LevelCap>Height of Power</BloodMage_LevelCap>
+   <BloodMage_LevelCapDesc>{0} has reached HIS height of power as a Blood Mage. HECAP can no longer advance in levels. However, according to the Liber Cruoris, an apprentice could kill HIM and consume HIS essence to become a more powerful mage.</BloodMage_LevelCapDesc>
+
+   <CastingAltar_GiveBloodTattoo>Carve blood tattoo</CastingAltar_GiveBloodTattoo>
+   
+   <CastingAltar_InfuseWeapon>Infuse Weapon</CastingAltar_InfuseWeapon>
+   
+   <CastingAltarBlood_Available>{0} / {1} liters of blood available.</CastingAltarBlood_Available>
+
+   <CastingAltarBlood_NexusRequired>No blood available.\nConstruct a Blood Nexus.</CastingAltarBlood_NexusRequired>
+
    <BloodMage_CastingOn>Casting on {0}.</BloodMage_CastingOn>
 
-   <BloodBookCreatedDesc>HECAP drips with blood. A flesh-bound book from the remains of a fresh kill falls from HIS hands. HECAP speaks to the others of seeing impossible landscapes paved in bloodstone where the air smells of copper. HECAP recalls in HIS visions the three keys to the doors of power.\n\n-an altar for the book\n-a nexus for the crystal\n-...blood\n\nIn the vision, when all the doors were opened, HE witnessed unfathomable power.\n\nThe others would have told HIM that HE had gone mad, if they hadn't just witnessed HIM call a bolt of lightning from the sky. Most colonists on the surface urge for the destruction of the book and the crystal. A few, however, are tempted to realize the completed vision, so they may dare witness what awe-striking power lays in wait.</BloodBookCreated>
+   <BloodBookCreated>Liber Cruoris Formed</BloodBookCreated>
+   <BloodBookCreatedDesc>HECAP drips with blood. A flesh-bound book from the remains of a fresh kill falls from HIS hands. HECAP speaks to the others of seeing impossible landscapes paved in bloodstone where the air smells of copper. HECAP recalls in HIS visions the three keys to the doors of power.\n\n-an altar for the book\n-a nexus for the crystal\n-...blood\n\nIn the vision, when all the doors were opened, HE witnessed unfathomable power.\n\nThe others would have told HIM that HE had gone mad, if they hadn't just witnessed HIM call a bolt of lightning from the sky. Most colonists on the surface urge for the destruction of the book and the crystal. A few, however, are tempted to realize the completed vision, so they may dare witness what awe-striking power lays in wait.</BloodBookCreatedDesc>
    <BloodBookCreation_Message>{0} begins creating something from {1}'s remains.</BloodBookCreation_Message>
 
    <BloodMageHediff_HearsWhispers>Hears whispers</BloodMageHediff_HearsWhispers>      
@@ -33,25 +47,27 @@
 	<BloodCrystalEventDesc>After the crimson comet passed overhead, {0} unearthed a strange crystal protruding from a nearby crater. Its magnificent luminescence seemed to call to {0}. As HE touched its surface, {0} accidentally cut HIMself on the unexpectedly sharp edges.\n\nTo HIS horror, the crystal pulled itself from the earth and levitated before HIM. It bobbed and gravitated towards HIM slowly, a strange low hum breaking the silence. Utilizing some unknown possibly magnetic force, the crystal drew more blood from {0}'s wound. It seeped into the air, the red, thick substance transformed into a mist, spreading over the crystal and into it. It ceased when {0} had hidden HIS cut. The humming stopped, and the crystal fell to the ground.\n\nThough shaken by the traumatic encounter, some believe the crystal's strange properties could serve the colony well if one were to study the anomalous entity closely and with careful observation.</BloodCrystalEventDesc>
   <BloodCommandBuildCastingAltar>Build Casting Altar</BloodCommandBuildCastingAltar>
 	<BloodCommandBuildCastingAltarDesc>Constructs a casting altar to utilize powerful blood magic.</BloodCommandBuildCastingAltarDesc>
+	<BloodTankNoExecutioner>Cannot find someone to carry out the deed.</BloodTankNoExecutioner>
 	<BloodTankStored>Stored</BloodTankStored>
 	<BloodTankEfficiency>Efficiency</BloodTankEfficiency>
-	<BloodTankLitres>litres</BloodTankLitres>
+	<BloodTankLitres>liters</BloodTankLitres>
 	<BloodHaulPrisoner_Gathering>Gathering prisoner</BloodHaulPrisoner_Gathering>'
 	<BloodHaulPrisoner_Strapping>Strapping {0} to device</BloodHaulPrisoner_Strapping>
 	<BloodHaulPrisoner_Finished>Finishing up</BloodHaulPrisoner_Finished>
-	<BloodNoPrisoners>No prisoners availble</BloodNoPrisoners>
-	<BloodBodyLoadable_Cancel>Cancelling loading body.</BloodBodyLoadable_Cancel>
+	<BloodNoBloodCollector>No adjacent blood collectors. Build one to proceed.</BloodNoBloodCollector>
+	<BloodNoPrisoners>No prisoners available</BloodNoPrisoners>
+	<BloodBodyLoadable_Cancel>Canceling loading body.</BloodBodyLoadable_Cancel>
 	<BloodBodyLoadable_MissingFactory>The blood factory is unavailable.</BloodBodyLoadable_MissingFactory>
 	<BloodBodyLoadable_ActorUnavailable>The actor is unavailable.</BloodBodyLoadable_ActorUnavailable>
 	<BloodBodyLoadable_BodyUnavailable>The body of {0} is unavailable.</BloodBodyLoadable_BodyUnavailable>
 	<BloodBodyLoadable_GatheringBody>{0} is gathering the body of {1}</BloodBodyLoadable_GatheringBody>
-	<BloodBodyLoadable_BodyLoaded>Body Loaded: ({0} litres left)</BloodBodyLoadable_BodyLoaded>
-	<BloodLossWarning>{0} has less than 4 litres of blood remaining.</BloodLossWarning>
+	<BloodBodyLoadable_BodyLoaded>Body Loaded: ({0} liters left)</BloodBodyLoadable_BodyLoaded>
+	<BloodLossWarning>{0} has less than 4 liters of blood remaining.</BloodLossWarning>
 	<BloodCommandLoadPrisoner>Load Prisoner</BloodCommandLoadPrisoner>
 	<BloodCommandLoadPrisonerDesc>A random colonist places a prisoner inside the blood factory.</BloodCommandLoadPrisonerDesc>
 	<BloodCommandCancelLoadPrisonerDesc>Cancel loading prisoner</BloodCommandCancelLoadPrisonerDesc>
 	<BloodCommandExtract>Claim Blood</BloodCommandExtract>
-	<BloodCommandExtractDesc>Extract {0} litres of blood from the blood tank.</BloodCommandExtractDesc>
+	<BloodCommandExtractDesc>Extract {0} liters of blood from the blood tank.</BloodCommandExtractDesc>
 	<MustPlaceNextToBloodCollectorAccepter>Must be placed next to something that needs a blood collector.</MustPlaceNextToBloodCollectorAccepter>
 	<BloodTankFull>Blood tank is full to capacity.</BloodTankFull>
 

@@ -199,7 +199,7 @@ namespace CultOfUvhash
             isLoading = true;
 
             Cthulhu.Utility.DebugReport("Force load called");
-            Job job = new Job(DefDatabase<JobDef>.GetNamed("BloodHaulPrisoner"), sacrifice, this);
+            Job job = new Job(UvhashDefOf.BloodHaulPrisoner, sacrifice, this);
             job.count = 1;
             executioner.jobs.TryTakeOrderedJob(job);
             //executioner.jobs.EndCurrentJob(JobCondition.InterruptForced);
@@ -208,8 +208,15 @@ namespace CultOfUvhash
         }
         private void TryLoadPrisoner(Pawn prisoner)
         {
-            Pawn executioner = null;
 
+            if (NearestBloodTank == null)
+            {
+                Messages.Message("BloodNoBloodCollector".Translate(), MessageTypeDefOf.RejectInput);
+                return;
+            }
+            
+            Pawn executioner = null;
+            
             //Try to find an executioner.
             foreach (Pawn current in this.Map.mapPawns.FreeColonistsSpawned)
             {
@@ -218,7 +225,7 @@ namespace CultOfUvhash
                     if (current.health.capacities.CapableOf(PawnCapacityDefOf.Manipulation) &&
                       current.health.capacities.CapableOf(PawnCapacityDefOf.Moving))
                     {
-                        if (Cthulhu.Utility.IsActorAvailable(current))
+                        if (Cthulhu.Utility.IsActorAvailable(current) && current?.CurJob?.def != UvhashDefOf.BloodHaulPrisoner)
                         {
                             executioner = current;
                             break;
@@ -233,7 +240,7 @@ namespace CultOfUvhash
             }
             else
             {
-                //Messages.Message("Cannot find executioner to carry out sacrifice", MessageSound.RejectInput);
+                Messages.Message("BloodTankNoExecutioner".Translate(), MessageTypeDefOf.RejectInput);
             }
         }
 
@@ -448,7 +455,8 @@ namespace CultOfUvhash
         public override string GetInspectString()
         {
             StringBuilder stringBuilder = new StringBuilder();
-            stringBuilder.AppendLine(base.GetInspectString());
+            stringBuilder.Append(base.GetInspectString());
+            stringBuilder.AppendLine();
             if (IsLoaded)
             {
                 stringBuilder.AppendLine("BloodBodyLoadable_BodyLoaded".Translate(new object[]

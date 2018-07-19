@@ -19,6 +19,7 @@
     <defName>Uvhash_BloodFactory_IronMaiden</defName>
     <label>blood factory (iron maiden)</label>
     <description>Simply referred to as a blood factory, this iron maiden takes in a corpse or live body and quickly drains them of blood.</description>
+	<uiIconPath>Building/Maiden_MenuIcon</uiIconPath>
     <thingClass>CultOfUvhash.Building_BloodFactory</thingClass>
     <category>Building</category>
     <minifiedDef>MinifiedFurniture</minifiedDef>
@@ -58,7 +59,6 @@
     <rotatable>true</rotatable>
     <designationCategory>Production</designationCategory>
     <constructEffect>ConstructWood</constructEffect>
-    <researchPrerequisites><li>Forbidden_Studies</li></researchPrerequisites>
   </ThingDef>
 
   <!-- Blood Collector -->
@@ -105,7 +105,6 @@
     <rotatable>true</rotatable>
     <designationCategory>Production</designationCategory>
     <constructEffect>ConstructWood</constructEffect>
-    <researchPrerequisites><li>Forbidden_Studies</li></researchPrerequisites>
 	<placeWorkers>
 	  <li>CultOfUvhash.PlaceWorker_NextToBloodCollectorAccepter</li>
 	</placeWorkers>
@@ -152,14 +151,47 @@
 			</li>
 			<li Class="CultOfUvhash.CompProperties_BloodTank">
 			    <transmitsBlood>false</transmitsBlood>
-				<storedBloodMax>3000.0</storedBloodMax>
+				<storedBloodMax>100.0</storedBloodMax>
+				<graphicDatas>
+				  <li>
+			          <texPath>Building/BloodPool_Empty</texPath>
+					  <graphicClass>Graphic_Single</graphicClass>
+					  <drawSize>(3.3,3.3)</drawSize>
+					  <damageData>
+						<rect>(0.05,0.1,0.9,0.9)</rect>
+					  </damageData>
+				  </li>
+				  <li>
+			          <texPath>Building/BloodPool_StageOne</texPath>
+					  <graphicClass>Graphic_Single</graphicClass>
+					  <drawSize>(3.3,3.3)</drawSize>
+					  <damageData>
+						<rect>(0.05,0.1,0.9,0.9)</rect>
+					  </damageData>
+				  </li>
+				  <li>
+			          <texPath>Building/BloodPool_StageTwo</texPath>
+					  <graphicClass>Graphic_Single</graphicClass>
+					  <drawSize>(3.3,3.3)</drawSize>
+					  <damageData>
+						<rect>(0.05,0.1,0.9,0.9)</rect>
+					  </damageData>
+				  </li>
+				  <li>
+			          <texPath>Building/BloodPool</texPath>
+					  <graphicClass>Graphic_Single</graphicClass>
+					  <drawSize>(3.3,3.3)</drawSize>
+					  <damageData>
+						<rect>(0.05,0.1,0.9,0.9)</rect>
+					  </damageData>
+				  </li>
+				</graphicDatas>
 			</li>
 		</comps>
     <tickerType>Normal</tickerType>
     <rotatable>false</rotatable>
     <designationCategory>Production</designationCategory>
     <constructEffect>ConstructWood</constructEffect>
-    <researchPrerequisites><li>Forbidden_Studies</li></researchPrerequisites>
   </ThingDef>
 
     <ThingDef Name="Uvhash_FurnitureBase" ParentName="BloodBuildingBase" Abstract="True">
@@ -215,6 +247,9 @@
       <graphicClass>Graphic_Multi</graphicClass>
       <shaderType>CutoutComplex</shaderType>
       <drawSize>(2.5,2.5)</drawSize>
+		<shadowData>
+			<volume>(0.4, 0.8, 0.4)</volume>
+		</shadowData>
       <!--
       <damageData>
         <rect>(0.05,0.27,1.9,1.73)</rect>

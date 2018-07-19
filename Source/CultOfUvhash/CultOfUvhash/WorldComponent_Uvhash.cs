@@ -45,6 +45,65 @@ namespace CultOfUvhash
         Awake
     }
 
+    public struct ud
+    {
+        public int Value;
+        public bool UvhashRequired;
+
+        public ud(int value, bool uvhashRequired = false)
+        {
+            this.Value = value;
+            this.UvhashRequired = uvhashRequired;
+        }
+    }
+    
+    public static class BloodMagic_SpellUnlockLevels
+    {
+        //Tattoos
+        public static ud TattooLeg = new ud(1);
+        public static ud TattooArm = new ud(1);
+        public static ud TattooHand = new ud(1);
+        public static ud TattooEye = new ud(2);
+        public static ud TattooEar = new ud(2);
+        public static ud TattooSpine = new ud(3);
+        public static ud TattooSternum = new ud(3);
+        public static ud TattooWaist = new ud(3);
+        
+        //Tattoos - Named
+        public static ud TattooTheMage = new ud(0);
+        public static ud TattooTheApprentice = new ud(1);
+        public static ud TattooTheLamb = new ud(7, true);
+        public static ud TattooTheBeast = new ud(7, true);
+        public static ud TattooTheCollar = new ud(7, true);
+        public static ud TattooBloodBomb = new ud(13, true);
+        public static ud TattooTheHive = new ud(13, true);
+        public static ud TattooEyebiter = new ud(13, true);
+        public static ud TattooBoneMantis = new ud(25, true);
+        public static ud TattooTheDefiler = new ud(25, true);
+        
+        //Infusions
+        public static ud InfusionLeech = new ud(7, true);
+        public static ud InfusionCollection = new ud(7, true);
+        public static ud InfusionSadism = new ud(13, true);
+        public static ud InfusionMasochism = new ud(13, true);
+        public static ud InfusionUvhashEmbraces = new ud(25, true);
+        public static ud InfusionUvhashGuides = new ud(25, true);
+        public static ud InfusionUvhashLeads = new ud(25, true);
+        public static ud InfusionUvhashSees = new ud(25, true);
+        public static ud InfusionUvhashWills = new ud(25, true);
+        public static ud InfusionUvhashConsumes = new ud(25, true);
+        public static ud InfusionUvhashLaughs = new ud(25, true);
+        public static ud InfusionUvhashDesires = new ud(25, true);
+        public static ud InfusionUvhashKnows = new ud(25, true);
+        public static ud InfusionUvhashDestroys = new ud(25, true);
+        public static ud InfusionUvhashWrath = new ud(25, true);
+        
+        //Rituals
+        public static ud RitualSummonUvhash = new ud(7, true);
+        public static ud RitualAvatar = new ud(25, true);
+
+    }
+
 
     public class WorldComponent_Uvhash : WorldComponent
     {
@@ -63,10 +122,14 @@ namespace CultOfUvhash
         private CometStage currentCometStage = CometStage.NotStarted;
         private CrystalStage currentCrystalStage = CrystalStage.None;
         private UvhashStage currentUvhashStage = UvhashStage.None;
+        private int currentBloodMagicCap;
 
 
         public Pawn CurrentBloodApprentice {get => currentBloodApprentice; set => currentBloodApprentice = value;}
         public Pawn CurrentBloodMage {get => currentBloodMage; set => currentBloodMage = value;}
+        public int CurrentBloodMagicCap {get => currentBloodMagicCap;
+            set => currentBloodMagicCap = value;
+        }
         public bool SpawnedCrystal {get => spawnedCrystal; set => spawnedCrystal = value;}
 
         public CometStage CurrentCometStage

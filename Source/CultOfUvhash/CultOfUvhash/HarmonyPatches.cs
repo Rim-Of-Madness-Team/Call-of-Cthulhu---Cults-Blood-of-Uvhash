@@ -28,7 +28,10 @@ namespace CultOfUvhash
         public static void HideBloodCultsThings(Designator_Build __instance, ref bool __result)
         {
             var entDef = Traverse.Create(__instance).Field("entDef").GetValue<BuildableDef>();
-            if (entDef is ThingDef d && d == UvhashDefOf.Uvhash_CastingAltar)
+            if (entDef is ThingDef d && 
+                (d == UvhashDefOf.Uvhash_CastingAltar ||
+                 d == UvhashDefOf.Uvhash_BloodNexus)
+                )
             {
                 __result = Find.World.GetComponent<WorldComponent_Uvhash>().CurrentCrystalStage >= CrystalStage.BookCreated;
             }

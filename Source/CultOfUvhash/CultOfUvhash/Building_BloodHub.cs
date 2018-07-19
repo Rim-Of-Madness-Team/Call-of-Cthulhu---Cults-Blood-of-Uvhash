@@ -7,6 +7,34 @@ namespace CultOfUvhash
 {
     public class Building_BloodHub : Building
     {
+        private Graphic _graphic;
+
+        public override Graphic Graphic
+        {
+            get
+            {
+                if (CompBloodTank.Props.graphicDatas.NullOrEmpty()) return base.Graphic;
+                if (_graphic == null || Find.TickManager.TicksGame % 250 == 0)
+                {
+                    _graphic = CompBloodTank.Props.graphicDatas[0].GraphicColoredFor(this);
+                    var divisor = CompBloodTank.Props.graphicDatas.Count;
+                    for (var i = 0; i < divisor; i++)
+                    {
+                        if (CompBloodTank.StoredBlood >= (CompBloodTank.Props.storedBloodMax / (divisor + i)))
+                        {
+                            _graphic = CompBloodTank.Props.graphicDatas[i].GraphicColoredFor(this);
+                        }
+                    }   
+                }
+                return _graphic;
+            }
+        }
+
+        private CompBloodTank CompBloodTank
+        {
+            get { return this.GetComp<CompBloodTank>(); }
+        }
+
         public override void Draw()
         {
             base.Draw();

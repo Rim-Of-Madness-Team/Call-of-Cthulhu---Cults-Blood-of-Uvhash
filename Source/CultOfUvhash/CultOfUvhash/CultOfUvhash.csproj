@@ -69,6 +69,7 @@
     <Compile Include="JobDriver_InvestigateBloodCrystal.cs" />
     <Compile Include="JobGiver_MakeTheBook.cs" />
     <Compile Include="MoteProlonged.cs" />
+    <Compile Include="UvhashCommand.cs" />
     <Compile Include="UvhashUtility.cs" />
     <Compile Include="WeatherEvent_BloodCometFlash.cs" />
     <Compile Include="CompBloodTank.cs" />

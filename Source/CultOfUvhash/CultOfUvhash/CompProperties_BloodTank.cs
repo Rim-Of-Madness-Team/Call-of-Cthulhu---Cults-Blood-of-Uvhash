@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using RimWorld;
 using Verse;
 
@@ -11,6 +12,8 @@ namespace CultOfUvhash
         public float efficiency = 1.0f;
 
         public bool transmitsBlood = true;
+
+        public List<GraphicData> graphicDatas = null;
         
         public CompProperties_BloodTank()
         {
